@@ -4,5 +4,8 @@
     <string name="app_name">easy-slim-beta</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="Recomendaciones">Recomendaciones</string>
+    <string name="Calorias">Consultar Calorias</string>
+    <string name="Menu">Menu</string>
 
 </resources>

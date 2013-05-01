@@ -8,19 +8,19 @@
         android:id="@+id/textView5"
         android:layout_width="218dp"
         android:layout_height="wrap_content"
-        android:text="Menu"
+        android:text="@string/Menu"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Consultar Calorias" />
+        android:text="@string/Calorias" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recomendaciones" />
+        android:text="@string/Recomendaciones" />
 
 </LinearLayout>
