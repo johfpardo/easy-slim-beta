@@ -15,9 +15,12 @@ import android.view.View.OnClickListener;
 
 public class AppActivity extends Activity {
  
+	final Context context = this;
 	String test;
 	Button button;
 	UserProfile perfil = new UserProfile();
+	FileOutputStream fos;
+	String FILENAME = "profile_file";
  
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,7 @@ public class AppActivity extends Activity {
 	
 	public void addListenerOnButton() {
  
-		final Context context = this;
+		
  
 		button = (Button) findViewById(R.id.button1);
  
@@ -51,19 +54,23 @@ public class AppActivity extends Activity {
 				EditText editText = (EditText) findViewById(R.id.editWeight);
 				String weight = editText.getText().toString();
 				perfil.setWeight(Double.parseDouble(weight));
+				//calculate imc
+				double imc = perfil.getWeight()/((perfil.getHeight()/100) * (perfil.getHeight() / 100));
+				perfil.setImc(imc);
+								
 				
-				//persist object in database
-				String FILENAME = "profile_file";
-				String edad = "$" + String.valueOf(perfil.getAge());
-				String altura = "$" +String.valueOf(perfil.getHeight());
-				String peso = "$" + String.valueOf(perfil.getWeight());
-				FileOutputStream fos;
+				//persist object in database				
+				String edad = ":" + String.valueOf(perfil.getAge());
+				String altura = ":" +String.valueOf(perfil.getHeight());
+				String peso = ":" + String.valueOf(perfil.getWeight());
+				String Simc = ":" + String.valueOf(imc);;
 				try {
 					fos = openFileOutput(FILENAME, Context.MODE_PRIVATE);
 					fos.write(perfil.getName().getBytes());
 					fos.write(edad.getBytes());
 					fos.write(altura.getBytes());
 					fos.write(peso.getBytes());
+					fos.write(Simc.getBytes());
 					fos.close();
 					
 				} catch (Exception e) {
@@ -71,8 +78,9 @@ public class AppActivity extends Activity {
 					e.printStackTrace();
 				}											
 					
-			    Intent intent = new Intent(context, AppMenuActivity.class);
-                            startActivity(intent);   
+			    Intent intent = new Intent(context, Menu.class);
+                            startActivity(intent);
+                            
  
 			}
  

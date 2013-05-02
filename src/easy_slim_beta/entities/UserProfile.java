@@ -5,6 +5,7 @@ public class UserProfile {
 	int age;
 	double height;
 	double weight;
+	double imc;
 	
 	public void setName(String var){
 		this.name=var;
@@ -36,5 +37,13 @@ public class UserProfile {
 	
 	public double getWeight(){
 		return this.weight;
+	}
+	
+	public void setImc(double var){
+		this.imc=var;
+	}
+	
+	public double getImc(){
+		return this.imc;
 	}
 }
