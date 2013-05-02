@@ -2,14 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/background" >
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/testNameView"
         android:layout_width="218dp"
         android:layout_height="wrap_content"
         android:text="@string/Menu"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:contentDescription="@string/none"
+        android:id="@+id/imageView1"
+        android:layout_width="140dp"
+        android:layout_height="132dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo2" />
 
     <Button
         android:id="@+id/button2"
@@ -22,5 +31,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Recomendaciones" />
+
+    <TextView
+        android:id="@+id/fileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
 </LinearLayout>
