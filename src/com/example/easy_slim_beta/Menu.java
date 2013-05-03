@@ -2,14 +2,21 @@ package com.example.easy_slim_beta;
 
 import java.io.FileInputStream;
 
-import easy_slim_beta.entities.UserProfile;
-import android.os.Bundle;
-import android.widget.TextView;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+import easy_slim_beta.entities.UserProfile;
 
 
 public class Menu extends Activity {
+	final Context context = this;
 	UserProfile perfil = new UserProfile();
+	Button button;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,6 +45,18 @@ public class Menu extends Activity {
 		perfil.setImc(Double.parseDouble(result[4]));
 		TextView fileview = (TextView) findViewById(R.id.fileView);
 		fileview.append(perfil.getName());
-		
+		addListenerOnButton();
+	}
+	
+	public void addListenerOnButton() {
+		button = (Button) findViewById(R.id.button1);
+ 
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			    Intent intent = new Intent(context, AppRecomendacionActivity.class);
+                startActivity(intent); 
+			}
+		});
 	}
 }
