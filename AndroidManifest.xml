@@ -13,8 +13,9 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
-            android:name="com.example.easy_slim_beta.AppActivity"
+            android:name="com.example.easy_slim_beta.FormActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,21 +24,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.AppMenuActivity"
+            android:name="com.example.easy_slim_beta.MainMenuActivity"
+            android:label="@string/app_name">
+        </activity>
+         <activity
+            android:name="com.example.easy_slim_beta.RecomendacionActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.AppCaloriasActivity"
+            android:name="com.example.easy_slim_beta.InfoActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.AppRecomendaconActivity"
+            android:name="com.example.easy_slim_beta.struntActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.Menu"
-            android:label="@string/title_activity_menu" >
+            android:name="com.example.easy_slim_beta.PorsionesActivity"
+            android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.example.easy_slim_beta.CaloriasActivity"
+            android:label="@string/app_name" >
+        </activity>        
     </application>
-
 </manifest>

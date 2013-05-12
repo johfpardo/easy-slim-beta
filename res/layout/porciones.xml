@@ -5,11 +5,10 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="218dp"
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/calorias"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:background="@drawable/background" />
+        android:text="Porsiones"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </LinearLayout>

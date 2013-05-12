@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonRecomend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Recomendación" />
+
+    <Button
+        android:id="@+id/buttonIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonRecomend"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="IMC" />
+
+    <Button
+        android:id="@+id/buttonModif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonIMC"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="Modificar Datos" />
+    
+    <Button
+        android:id="@+id/buttonPorcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonModif"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="Porciones" />
+    
+    <Button
+        android:id="@+id/buttonCalorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonPorcion"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:text="Buscador de Calorias" />
+
+</RelativeLayout>
