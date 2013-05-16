@@ -20,5 +20,10 @@
     <string name="dietsB">Dietas</string>
     <string name="foodB">Consultar alimentos</string>
     <string name="weightB">peso</string>
+    <string name="info_title">Informacion general</string>
+    <string name="info_condition">test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 </string>
+    <string name="info_thin">informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados </string>
+    <string name="info_normal">informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal </string>
+    <string name="info_fat">informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo </string>
 
 </resources>

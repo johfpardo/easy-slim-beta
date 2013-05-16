@@ -46,4 +46,8 @@ public class UserProfile {
 	public double getImc(){
 		return this.imc;
 	}
+	
+	public void calculateImc(){
+		this.imc=this.weight/((this.height/100)*(this.height/100));
+	}
 }
