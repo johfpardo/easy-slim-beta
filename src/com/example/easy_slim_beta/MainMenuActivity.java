@@ -42,7 +42,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
         
         switch(v.getId()){
             case R.id.buttonRecomend:
-            	startActivity(new Intent(this, RecomendacionActivity.class));
+            	startActivity(new Intent(this, AdviceActivity.class));
             	break;
             case R.id.buttonIMC:
             	startActivity(new Intent(this, InfoActivity.class));

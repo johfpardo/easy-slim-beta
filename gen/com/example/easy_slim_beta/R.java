@@ -30,47 +30,53 @@ public final class R {
         public static final int thinhuman=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f080018;
-        public static final int button1=0x7f080003;
-        public static final int buttonCalorias=0x7f080008;
-        public static final int buttonIMC=0x7f080004;
-        public static final int buttonModif=0x7f080006;
-        public static final int buttonPorcion=0x7f080007;
-        public static final int buttonRecomend=0x7f080005;
-        public static final int displaying=0x7f08000a;
-        public static final int editTextHeight=0x7f080010;
-        public static final int editTextName=0x7f08000c;
-        public static final int editTextWeigth=0x7f080012;
-        public static final int imageInfo=0x7f080001;
-        public static final int imageView1=0x7f080009;
-        public static final int menu_settings=0x7f080017;
-        public static final int pickDate=0x7f08000e;
-        public static final int radioGroupSex=0x7f080014;
-        public static final int radioMan=0x7f080015;
-        public static final int radioWoman=0x7f080016;
-        public static final int textInfo=0x7f080002;
-        public static final int textView1=0x7f080000;
-        public static final int textViewBirth=0x7f08000d;
-        public static final int textViewHeight=0x7f08000f;
-        public static final int textViewName=0x7f08000b;
-        public static final int textViewSex=0x7f080013;
-        public static final int textViewWeight=0x7f080011;
+        public static final int action_settings=0x7f08001b;
+        public static final int button1=0x7f080007;
+        public static final int buttonCalorias=0x7f08000c;
+        public static final int buttonIMC=0x7f080008;
+        public static final int buttonModif=0x7f08000a;
+        public static final int buttonPorcion=0x7f08000b;
+        public static final int buttonRecomend=0x7f080009;
+        public static final int editTextHeight=0x7f080013;
+        public static final int editTextName=0x7f08000f;
+        public static final int editTextWeigth=0x7f080015;
+        public static final int imageInfo=0x7f080005;
+        public static final int imageView1=0x7f08000d;
+        public static final int menu_settings=0x7f08001a;
+        public static final int nextButton=0x7f080003;
+        public static final int pickDate=0x7f080011;
+        public static final int prevButton=0x7f080002;
+        public static final int radioGroupSex=0x7f080017;
+        public static final int radioMan=0x7f080018;
+        public static final int radioWoman=0x7f080019;
+        public static final int recomendationImage=0x7f080000;
+        public static final int recomendationText=0x7f080001;
+        public static final int textInfo=0x7f080006;
+        public static final int textView1=0x7f080004;
+        public static final int textViewBirth=0x7f080010;
+        public static final int textViewHeight=0x7f080012;
+        public static final int textViewName=0x7f08000e;
+        public static final int textViewSex=0x7f080016;
+        public static final int textViewWeight=0x7f080014;
     }
     public static final class layout {
-        public static final int calorias=0x7f030000;
-        public static final int imc=0x7f030001;
-        public static final int menu=0x7f030002;
-        public static final int porciones=0x7f030003;
-        public static final int recomendacion=0x7f030004;
+        public static final int activity_advice=0x7f030000;
+        public static final int calorias=0x7f030001;
+        public static final int imc=0x7f030002;
+        public static final int menu=0x7f030003;
+        public static final int porciones=0x7f030004;
         public static final int register=0x7f030005;
     }
     public static final class menu {
         public static final int activity_menu=0x7f070000;
-        public static final int main=0x7f070001;
+        public static final int advice=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int Calorias=0x7f050003;
         public static final int Menu=0x7f050004;
+        public static final int Next=0x7f050026;
+        public static final int Previous=0x7f050027;
         public static final int Recomendaciones=0x7f050002;
         public static final int accept=0x7f050009;
         public static final int action_settings=0x7f050001;
@@ -85,6 +91,7 @@ public final class R {
         public static final int dietsB=0x7f050010;
         public static final int foodB=0x7f050011;
         public static final int height=0x7f050021;
+        public static final int hello_world=0x7f050025;
         public static final int info_condition=0x7f050014;
         public static final int info_fat=0x7f050017;
         public static final int info_normal=0x7f050016;
@@ -98,6 +105,7 @@ public final class R {
         public static final int pickDate=0x7f05001b;
         public static final int profile_file=0x7f05000a;
         public static final int sex=0x7f050023;
+        public static final int title_activity_advice=0x7f050024;
         public static final int title_activity_menu=0x7f05000f;
         public static final int user_profile=0x7f05001c;
         public static final int weight=0x7f050022;
