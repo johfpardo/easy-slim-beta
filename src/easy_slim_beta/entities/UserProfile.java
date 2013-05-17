@@ -3,9 +3,13 @@ package easy_slim_beta.entities;
 public class UserProfile {
 	String name;
 	int age;
-	double height;
-	double weight;
-	double imc;
+	int year;
+	int month;
+	int day;
+	float height;
+	float weight;
+	float imc;
+	boolean sex; //true is man and false is woman
 	
 	public void setName(String var){
 		this.name=var;
@@ -23,30 +27,62 @@ public class UserProfile {
 		return this.age;
 	}
 	
-	public void setHeight(double var){
+	public void setHeight(float var){
 		this.height=var;
 	}
 	
-	public double getHeight(){
+	public float getHeight(){
 		return this.height;
 	}
 	
-	public void setWeight(double var){
+	public void setWeight(float var){
 		this.weight=var;
 	}
 	
-	public double getWeight(){
+	public float getWeight(){
 		return this.weight;
 	}
 	
-	public void setImc(double var){
+	public void setImc(float var){
 		this.imc=var;
 	}
 	
-	public double getImc(){
+	public float getImc(){
 		return this.imc;
 	}
 	
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
+
+	public boolean isSex() {
+		return sex;
+	}
+
+	public void setSex(boolean sex) {
+		this.sex = sex;
+	}
+
 	public void calculateImc(){
 		this.imc=this.weight/((this.height/100)*(this.height/100));
 	}
