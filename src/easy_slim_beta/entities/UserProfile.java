@@ -1,5 +1,7 @@
 package easy_slim_beta.entities;
 
+import java.util.Date;
+
 public class UserProfile {
 	String name;
 	int age;
@@ -21,6 +23,20 @@ public class UserProfile {
 	
 	public void setAge(int var){
 		this.age=var;
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void setAge(){
+		Date today = new Date();
+		if(today.getMonth() >= this.month){
+			if(today.getDay() >= this.day){
+				this.age= today.getYear() - this.year;
+			}else{
+				this.age= today.getYear() - this.year - 1;
+			}
+		}else{
+			this.age= today.getYear() - this.year - 1;
+		}
 	}
 	
 	public int getAge(){
@@ -85,5 +101,17 @@ public class UserProfile {
 
 	public void calculateImc(){
 		this.imc=this.weight/((this.height/100)*(this.height/100));
+	}
+	
+	public void set (String newName, int newYear, int newMonth, int newDay, float newHeight, float newWeight, boolean newSex){
+		setName(newName);
+		setYear(newYear);
+		setMonth(newMonth);
+		setDay(newDay);
+		setAge();
+		setHeight(newHeight);
+		setWeight(newWeight);
+		setSex(newSex);
+		calculateImc();	
 	}
 }
