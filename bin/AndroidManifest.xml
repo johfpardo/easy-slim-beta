@@ -50,6 +50,10 @@
             android:name="com.example.easy_slim_beta.AdviceActivity"
             android:label="@string/title_activity_advice" >
         </activity>
+         <activity android:name="com.google.ads.AdActivity"
+   android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <meta-data android:value="true" android:name="ADMOB_ALLOW_LOCATION_FOR_ADS" />
 </manifest>

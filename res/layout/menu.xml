@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/lib/com.google.ads">
 
     <Button
         android:id="@+id/buttonIMC"
@@ -62,7 +62,7 @@
         android:layout_below="@+id/imageView1"
         android:background="@anim/custombutton"
         android:text="Recomendación" />
-
+    
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="140dp"
@@ -72,4 +72,21 @@
         android:contentDescription="@string/none"
         android:src="@drawable/logo2" />
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >    
+     </TableRow>
+
+    <com.google.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="e9fbd061f5ad4ff7" >
+    </com.google.ads.AdView>
+        
 </RelativeLayout>

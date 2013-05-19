@@ -10,16 +10,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
 
 
 public class MainMenuActivity extends Activity implements OnClickListener{
 	
+	protected AdView adView;
 	static UserProfile user = new UserProfile();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
+		adView = (AdView)findViewById(R.id.ad);
+		adView.loadAd(new AdRequest());
 		
 		Button boton = (Button)findViewById(R.id.buttonRecomend);
 		boton.setOnClickListener(this);  	
