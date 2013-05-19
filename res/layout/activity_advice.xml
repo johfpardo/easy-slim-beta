@@ -33,8 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="@string/Previous"
-        android:onClick="prevRecomendation" />
+        android:background="@anim/custombutton1"
+        android:onClick="prevRecomendation"
+        android:text="@string/Previous" />
 
     <Button
         android:id="@+id/nextButton"
@@ -43,7 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="@string/Next"
-        android:onClick="nextRecomendation" />
+        android:background="@anim/custombutton1"
+        android:onClick="nextRecomendation"
+        android:text="@string/Next" />
 
 </RelativeLayout>

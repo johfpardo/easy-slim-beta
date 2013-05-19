@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:gravity="center_horizontal"
     android:orientation="vertical" >
 
     <TextView
@@ -11,5 +12,64 @@
         android:layout_height="wrap_content"
         android:text="Porsiones"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical|right" >
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="30dp"
+            android:background="@anim/custombuttondairy" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@anim/custombuttonfruit" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@anim/custombuttongrains" />
+    
+        </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@anim/custombuttonvegetables" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@anim/custombuttonprotein" />
+
+    </TableRow>
+    
 
 </LinearLayout>
