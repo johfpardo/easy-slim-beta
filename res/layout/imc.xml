@@ -32,7 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/accept"
-        android:onClick="okButton" />
+        android:onClick="okButton"
+        android:background="@anim/custombutton" />
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"

@@ -1,21 +1,23 @@
 package com.example.easy_slim_beta;
 
-import easy_slim_beta.entities.UserProfile;
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
+
+import easy_slim_beta.entities.UserProfile;
 
 
 public class MainMenuActivity extends Activity implements OnClickListener{
 	
+	SharedPreferences sharedPref;
 	protected AdView adView;
 	static UserProfile user = new UserProfile();
 	
@@ -40,6 +42,8 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		
 		Button boton5 = (Button)findViewById(R.id.buttonCalorias);
 		boton5.setOnClickListener(this);
+		
+		load();
 	}
 		
 	@Override
@@ -64,18 +68,22 @@ public class MainMenuActivity extends Activity implements OnClickListener{
         }        	       
         }
 	
-	@SuppressLint("InlinedApi")
+	
 	public void load (){
-		SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.user_profile),Context.MODE_MULTI_PROCESS);
-		String name = sharedPref.getString(getString(R.string.name), null);
-		int year = sharedPref.getInt(getString(R.string.year), (Integer) null);
-		int month = sharedPref.getInt(getString(R.string.month), (Integer) null);
-		int day = sharedPref.getInt(getString(R.string.day), (Integer) null);
-		float height = sharedPref.getFloat(getString(R.string.height), (Float) null);
-		float weight = sharedPref.getFloat(getString(R.string.weight), (Float) null);
-		boolean sex = sharedPref.getBoolean(getString(R.string.sex), (Boolean) null);
+		sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
+		String name = sharedPref.getString(getString(R.string.name), "");
+		int year = sharedPref.getInt(getString(R.string.year), 0);
+		int month = sharedPref.getInt(getString(R.string.month), 0);
+		int day = sharedPref.getInt(getString(R.string.day), 0);
+		float height = sharedPref.getFloat(getString(R.string.height), 0);
+		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
+		boolean sex = sharedPref.getBoolean(getString(R.string.sex), false);
 		
 		user.set(name, year, month, day, height, weight, sex);	
+		
+		TextView nameview = (TextView) findViewById(R.id.welcomeView);
+		nameview.append(user.getName());
+		
 	}
 }
 	

@@ -1,7 +1,7 @@
 package com.example.easy_slim_beta;
 
 import java.util.Calendar;
-import android.annotation.SuppressLint;
+
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -9,16 +9,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.view.View;
-import android.view.View.OnClickListener;
 
 
 public class FormActivity extends Activity {
  
+	SharedPreferences sharedPref;
+	SharedPreferences.Editor editor;
 	Button pickDate;
 	Button button;
 	String name;
@@ -101,7 +103,7 @@ public class FormActivity extends Activity {
 	     return null;
 	}
 	
-	@SuppressLint("InlinedApi")
+	
 	public void save(){
 		
 		//save input in a SharedPreferences file called UserProfile
@@ -115,8 +117,8 @@ public class FormActivity extends Activity {
 		RadioButton radioSex = (RadioButton)findViewById(R.id.radioWoman);
         sex = radioSex.isChecked();
         
-		SharedPreferences sharedPref = this.getSharedPreferences(getString(R.string.user_profile),Context.MODE_MULTI_PROCESS);
-		SharedPreferences.Editor editor = sharedPref.edit();
+        sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
+		editor = sharedPref.edit();
 		editor.putString(getString(R.string.name),name);
 		editor.putInt(getString(R.string.year), year);
 		editor.putInt(getString(R.string.month), month);
