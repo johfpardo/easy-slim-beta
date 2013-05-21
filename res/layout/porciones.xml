@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/lib/com.google.ads">
 
     <TextView
         android:id="@+id/textView1"
@@ -16,7 +16,7 @@
     <TableRow
         android:id="@+id/tableRow3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="123dp"
         android:layout_marginTop="30dp"
         android:gravity="center_vertical|right" >
 
@@ -70,6 +70,28 @@
             android:background="@anim/custombuttonprotein" />
 
     </TableRow>
-    
+ <RelativeLayout 
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >   
+<TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >    
+     </TableRow>
+
+<com.google.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/ad"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    app:adSize="SMART_BANNER"
+    app:adUnitId="e9fbd061f5ad4ff7" >
+</com.google.ads.AdView>
+
+      </RelativeLayout>
 
 </LinearLayout>

@@ -1,5 +1,8 @@
 package com.example.easy_slim_beta;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,12 +12,15 @@ import android.widget.TextView;
 import easy_slim_beta.entities.UserProfile;
 
 public class InfoActivity extends Activity{
+	protected AdView adView;
 	UserProfile profile = new UserProfile();
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.imc);
+		adView = (AdView)findViewById(R.id.ad);
+		adView.loadAd(new AdRequest());
 		//test values
 		profile.setName("test");
 		profile.setAge(12);
