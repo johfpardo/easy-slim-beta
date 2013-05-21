@@ -31,8 +31,8 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="okButton"
-        android:text="@string/accept" />
+        android:text="@string/accept"
+        android:onClick="okButton" />
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
