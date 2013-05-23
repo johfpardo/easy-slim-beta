@@ -1,5 +1,8 @@
 package com.example.easy_slim_beta;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +14,7 @@ import easy_slim_beta.entities.UserProfile;
 
 public class InfoActivity extends Activity{
 	SharedPreferences sharedPref;
+	protected AdView adView;
 	UserProfile profile = new UserProfile();
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -18,7 +22,9 @@ public class InfoActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.imc);		
 		load();
-		setContent();		
+		setContent();
+		adView = (AdView)findViewById(R.id.ad);
+		adView.loadAd(new AdRequest());
 	}	
 	
 	public void load (){
