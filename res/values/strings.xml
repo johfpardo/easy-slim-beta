@@ -14,7 +14,7 @@
     <string name="profile_file">profile_shared</string>
     <string name="calorias">calorias</string>
     <string name="none" />
-    <string name="welcome">Bienvenido: </string>
+    <string name="welcome">Hola </string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_menu">Menu</string>
     <string name="dietsB">Dietas</string>
@@ -41,5 +41,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="Next">Siguiente</string>
     <string name="Previous">Anterior</string>
+    <string name="dialogMessage">por favor inserta valores correctos</string>
+    <string name="heightTitleInfo">Estatura</string>
+    <string name="weightTitleInfo">Peso</string>
+    <string name="imcTitleInfo">IMC</string>
 
 </resources>
