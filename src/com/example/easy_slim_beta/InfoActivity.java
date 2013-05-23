@@ -45,15 +45,16 @@ public class InfoActivity extends Activity{
 
 	private void setContent() {
 		// TODO Auto-generated method stub
-		DecimalFormat form = new DecimalFormat("0.00");  
+		DecimalFormat formImc = new DecimalFormat("0.0");
+		DecimalFormat formHeight = new DecimalFormat("0");
 	     
 		//put info of user
 		TextView heightview = (TextView) findViewById(R.id.heightInfo);
-		heightview.setText(Double.toString(profile.getHeight()));
+		heightview.setText(formHeight.format(profile.getHeight()));
 		TextView weightview = (TextView) findViewById(R.id.weightInfo);
-		weightview.setText("  "+Double.toString(profile.getWeight()));
+		weightview.setText(formHeight.format(profile.getWeight()));
 		TextView imcview = (TextView) findViewById(R.id.imcInfo);		
-		imcview.setText(form.format(profile.getImc()));
+		imcview.setText(formImc.format(profile.getImc()));
 		
 		//get health info according to the user
 		if(profile.getImc()<=18.49){

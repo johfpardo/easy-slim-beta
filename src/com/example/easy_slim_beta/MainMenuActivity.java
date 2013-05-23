@@ -82,6 +82,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		user.set(name, year, month, day, height, weight, sex);	
 		
 		TextView nameview = (TextView) findViewById(R.id.welcomeView);
+		nameview.append("  ");
 		nameview.append(user.getName());
 		
 	}
