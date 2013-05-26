@@ -1,7 +1,6 @@
 package com.example.easy_slim_beta;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdView;
+import java.text.DecimalFormat;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 import easy_slim_beta.entities.UserProfile;
 
 public class InfoActivity extends Activity{
@@ -42,6 +45,18 @@ public class InfoActivity extends Activity{
 
 	private void setContent() {
 		// TODO Auto-generated method stub
+		DecimalFormat formImc = new DecimalFormat("0.0");
+		DecimalFormat formHeight = new DecimalFormat("0");
+	     
+		//put info of user
+		TextView heightview = (TextView) findViewById(R.id.heightInfo);
+		heightview.setText(formHeight.format(profile.getHeight()));
+		TextView weightview = (TextView) findViewById(R.id.weightInfo);
+		weightview.setText(formHeight.format(profile.getWeight()));
+		TextView imcview = (TextView) findViewById(R.id.imcInfo);		
+		imcview.setText(formImc.format(profile.getImc()));
+		
+		//get health info according to the user
 		if(profile.getImc()<=18.49){
 			//set content thin
 			ImageView image = (ImageView) findViewById(R.id.imageInfo);

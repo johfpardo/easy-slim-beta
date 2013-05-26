@@ -3,9 +3,11 @@ package com.example.easy_slim_beta;
 import java.util.Calendar;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -65,9 +67,36 @@ public class FormActivity extends Activity {
  
 			@Override
 			public void onClick(View arg0) {
-				save();
-			    Intent intent = new Intent(context,MainMenuActivity.class);
-                            startActivity(intent);   
+				try{
+					save();
+					Intent intent = new Intent(context,MainMenuActivity.class);
+	                startActivity(intent);               
+					}
+					catch(Exception e){
+						//show dialog
+						AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+								context);								
+				 
+							// set dialog message
+							alertDialogBuilder
+								.setMessage(getString(R.string.dialogMessage))
+								.setCancelable(false)
+								.setPositiveButton(getString(R.string.accept),new DialogInterface.OnClickListener() {
+									public void onClick(DialogInterface dialog,int id) {
+
+									}
+								  });
+								
+								// create alert dialog
+								AlertDialog alertDialog = alertDialogBuilder.create();
+				 
+								// show it
+								alertDialog.show();
+							
+
+
+						// Showing Alert Message
+					}
  
 			}
  
