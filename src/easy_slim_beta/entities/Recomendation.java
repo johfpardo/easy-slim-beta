@@ -1,18 +1,12 @@
 package easy_slim_beta.entities;
 
 public class Recomendation {
-	int bmi;
 	String textRecomendation;
 	String imageName;
 	
-	public Recomendation(int bmi, String textRecomendation, String imageName) {
-		this.bmi =bmi;
+	public Recomendation(String textRecomendation, String imageName) {
 		this.textRecomendation = textRecomendation;
 		this.imageName = imageName;
-	}
-	
-	public int getBmi() {
-		return bmi;
 	}
 
 	public String getTextRecomendation() {
@@ -22,5 +16,4 @@ public class Recomendation {
 	public String getImageName() {
 		return imageName;
 	}
-
 }

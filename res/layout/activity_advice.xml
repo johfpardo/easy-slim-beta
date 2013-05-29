@@ -8,13 +8,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AdviceActivity" >
 
+    <TextView
+        android:id="@+id/numberRecomendation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/RecomendationText"
+        android:textSize="18sp" />
+/>
+    
+    
+
     <ImageView
         android:id="@+id/recomendationImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" />
+        android:layout_below="@+id/numberRecomendation" />
 
     <TextView
         android:id="@+id/recomendationText"
@@ -31,8 +44,9 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_alignBaseline="@+id/nextButton"
+        android:layout_alignBottom="@+id/nextButton"
+        android:layout_alignLeft="@+id/recomendationText"
         android:background="@anim/custombutton1"
         android:onClick="prevRecomendation"
         android:text="@string/Previous" />
@@ -43,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/recomendationText"
         android:background="@anim/custombutton1"
         android:onClick="nextRecomendation"
         android:text="@string/Next" />

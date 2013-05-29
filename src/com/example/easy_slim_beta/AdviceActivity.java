@@ -12,17 +12,16 @@ import easy_slim_beta.dao.RecomendationDao;
 import easy_slim_beta.entities.Recomendation;
 
 public class AdviceActivity extends Activity {
-	List<Recomendation> r;
-	int index;
+	private List<Recomendation> recomendations;
+	private int index;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_advice);
-		
-		r = (new RecomendationDao()).getRecomendationForBMI(0);
+		recomendations = new RecomendationDao(this).getRecomendationForBMI(MainMenuActivity.user.getImc());
 		index=0;
-		setRecomendation(index);
+		setRecomendation();
 	}
 
 	@Override
@@ -32,24 +31,29 @@ public class AdviceActivity extends Activity {
 		return true;
 	}
 	
-	public void setRecomendation(int index) {
-		ImageView iv = (ImageView) findViewById(R.id.recomendationImage);
-		TextView tv= (TextView) findViewById(R.id.recomendationText);
-		
-		iv.setImageResource(getResources()
-				.getIdentifier(r.get(index).getImageName(), "drawable", getPackageName()));
-		tv.setText(r.get(index).getTextRecomendation());
+	public void setRecomendation() {
+		ImageView ri = (ImageView) findViewById(R.id.recomendationImage);
+		TextView rt = (TextView) findViewById(R.id.recomendationText);
+		TextView nr = (TextView) findViewById(R.id.numberRecomendation);
+		try {
+			ri.setImageResource(getResources().getIdentifier(
+				recomendations.get(index).getImageName(), "drawable", getPackageName()));
+			rt.setText(recomendations.get(index).getTextRecomendation());
+			nr.setText("Recomendacion "+(index+1)+" de "+recomendations.size());
+		} catch(Exception e) {
+			rt.setText("No se encontraron Recomendaciones para usted.");
+		}
 	}
 	
 	public void nextRecomendation(View view) {
 		index++;
-		if(index==r.size()) index=0;
-		setRecomendation(index);
+		if(index==recomendations.size()) index=0;
+		setRecomendation();
 	}
 	
 	public void prevRecomendation(View view) {
 		index--;
-		if(index==-1) index=r.size()-1;
-		setRecomendation(index);
+		if(index==-1) index+=recomendations.size();
+		setRecomendation();
 	}
 }
