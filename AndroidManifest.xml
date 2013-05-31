@@ -39,7 +39,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.PorsionesActivity"
+            android:name="com.example.easy_slim_beta.PorcionesActivity"
             android:label="@string/app_name" >
         </activity>
         <activity

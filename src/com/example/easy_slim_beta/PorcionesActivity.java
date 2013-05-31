@@ -6,7 +6,7 @@ import com.google.ads.AdView;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class PorsionesActivity extends Activity{
+public class PorcionesActivity extends Activity{
 	
 	protected AdView adView;
 	

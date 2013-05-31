@@ -11,7 +11,6 @@ public class UserProfile {
 	float height;
 	float weight;
 	float imc;
-	boolean sex; //true is man and false is woman
 	
 	public void setName(String var){
 		this.name=var;
@@ -91,19 +90,12 @@ public class UserProfile {
 		this.day = day;
 	}
 
-	public boolean isSex() {
-		return sex;
-	}
-
-	public void setSex(boolean sex) {
-		this.sex = sex;
-	}
 
 	public void calculateImc(){
 		this.imc=this.weight/((this.height/100)*(this.height/100));
 	}
 	
-	public void set (String newName, int newYear, int newMonth, int newDay, float newHeight, float newWeight, boolean newSex){
+	public void set (String newName, int newYear, int newMonth, int newDay, float newHeight, float newWeight){
 		setName(newName);
 		setYear(newYear);
 		setMonth(newMonth);
@@ -111,7 +103,6 @@ public class UserProfile {
 		setAge();
 		setHeight(newHeight);
 		setWeight(newWeight);
-		setSex(newSex);
 		calculateImc();	
 	}
 }

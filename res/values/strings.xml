@@ -25,9 +25,6 @@
     <string name="info_thin">informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados </string>
     <string name="info_normal">informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal </string>
     <string name="info_fat">informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo </string>
-    <string name="askSex">Genero:</string>
-    <string name="man">Hombre</string>
-    <string name="woman">Mujer</string>
     <string name="pickDate">Ingresar Fecha</string>
     <string name="user_profile">UserProfile</string>
     <string name="name">name</string>
@@ -36,7 +33,6 @@
     <string name="day">day</string>
     <string name="height">height</string>
     <string name="weight">weight</string>
-    <string name="sex">sex</string>
     <string name="title_activity_advice">Recomendaciones</string>
     <string name="hello_world">Hello world!</string>
     <string name="Next">Siguiente</string>
@@ -46,5 +42,6 @@
     <string name="weightTitleInfo">Peso</string>
     <string name="imcTitleInfo">IMC</string>
     <string name="RecomendationText">Recomendación 0 de 0</string>
+    <string name="portions">Porciones</string>
 
 </resources>

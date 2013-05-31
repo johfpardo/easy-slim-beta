@@ -46,27 +46,27 @@ public void onCreate(Bundle savedInstanceState)
         startActivity(newActivity0);
        break;
        case 1:
-        Intent newActivity1 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+        Intent newActivity1 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
         startActivity(newActivity1);
        break;
        case 2:
-           Intent newActivity2 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+           Intent newActivity2 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity2);
           break;
        case 3:
-           Intent newActivity3 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+           Intent newActivity3 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity3);
           break;
        case 4:
-           Intent newActivity4 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+           Intent newActivity4 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity4);
           break;
        case 5:
-           Intent newActivity5 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+           Intent newActivity5 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity5);
           break;
        case 6:
-           Intent newActivity6 = new Intent(MineralesListActivity.this,PorsionesActivity.class);     
+           Intent newActivity6 = new Intent(MineralesListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity6);
           break;   
        default:
