@@ -46,51 +46,51 @@ public void onCreate(Bundle savedInstanceState)
         startActivity(newActivity0);
        break;
        case 1:
-        Intent newActivity1 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+        Intent newActivity1 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
         startActivity(newActivity1);
        break;
        case 2:
-           Intent newActivity2 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity2 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity2);
           break;
        case 3:
-           Intent newActivity3 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity3 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity3);
           break;
        case 4:
-           Intent newActivity4 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity4 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity4);
           break;
        case 5:
-           Intent newActivity5 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity5 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity5);
           break;
        case 6:
-           Intent newActivity6 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity6 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity6);
           break;
        case 7:
-           Intent newActivity7 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity7 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity7);
           break;
        case 8:
-           Intent newActivity8 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity8 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity8);
           break;  
        case 9:
-           Intent newActivity9 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity9 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity9);
           break;  
        case 10:
-           Intent newActivity10 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity10 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity10);
           break;  
        case 11:
-           Intent newActivity11 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity11 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity11);
           break;  
        case 12:
-           Intent newActivity12 = new Intent(VitaminasListActivity.this,PorsionesActivity.class);     
+           Intent newActivity12 = new Intent(VitaminasListActivity.this,PorcionesActivity.class);     
            startActivity(newActivity12);
           break;      
        default:

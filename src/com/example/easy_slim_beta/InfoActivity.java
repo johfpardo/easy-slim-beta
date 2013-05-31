@@ -38,9 +38,8 @@ public class InfoActivity extends Activity{
 		int day = sharedPref.getInt(getString(R.string.day), 0);
 		float height = sharedPref.getFloat(getString(R.string.height), 0);
 		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
-		boolean sex = sharedPref.getBoolean(getString(R.string.sex), false);
 		
-		profile.set(name, year, month, day, height, weight, sex);		
+		profile.set(name, year, month, day, height, weight);		
 	}
 
 	private void setContent() {

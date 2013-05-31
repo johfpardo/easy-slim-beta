@@ -60,7 +60,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
             	startActivity(new Intent(this, FormActivity.class));
             	break;	
             case R.id.buttonPorcion:
-            	startActivity(new Intent(this, PorsionesActivity.class));
+            	startActivity(new Intent(this, PorcionesActivity.class));
             	break;	
             case R.id.buttonCalorias:
             	startActivity(new Intent(this, CaloriasActivity.class));
@@ -77,9 +77,8 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		int day = sharedPref.getInt(getString(R.string.day), 0);
 		float height = sharedPref.getFloat(getString(R.string.height), 0);
 		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
-		boolean sex = sharedPref.getBoolean(getString(R.string.sex), false);
 		
-		user.set(name, year, month, day, height, weight, sex);	
+		user.set(name, year, month, day, height, weight);	
 		
 		TextView nameview = (TextView) findViewById(R.id.welcomeView);
 		nameview.append("  ");

@@ -29,6 +29,13 @@
         android:text="@string/askBirthDay"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" 
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <Button
         android:id="@+id/pickDate"
         android:layout_width="wrap_content"
@@ -63,33 +70,6 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal" />
-
-    <TextView
-        android:id="@+id/textViewSex"
-        android:layout_width="302dp"
-        android:layout_height="wrap_content"
-        android:text="@string/askSex"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <RadioGroup
-        android:id="@+id/radioGroupSex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-        <RadioButton
-            android:id="@+id/radioMan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/man" />
-
-        <RadioButton
-            android:id="@+id/radioWoman"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/woman" />
-
-    </RadioGroup>
 
     <Button
         android:id="@+id/button1"

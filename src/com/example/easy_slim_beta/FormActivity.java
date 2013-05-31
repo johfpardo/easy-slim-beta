@@ -16,13 +16,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioButton;
+import android.widget.TextView;
 
 
 public class FormActivity extends Activity {
  
 	SharedPreferences sharedPref;
 	SharedPreferences.Editor editor;
+	TextView dateDisplay;
 	Button pickDate;
 	Button button;
 	String name;
@@ -31,7 +32,6 @@ public class FormActivity extends Activity {
 	int day;
 	float height;
 	float weight;
-	boolean sex;
 	final int DATE_DIALOG_ID = 0;
  
 	@Override
@@ -47,8 +47,10 @@ public class FormActivity extends Activity {
  
 		final Context context = this;
  
+		dateDisplay = (TextView) findViewById(R.id.textViewDate);
 		pickDate = (Button) findViewById(R.id.pickDate);
 		button = (Button) findViewById(R.id.button1);
+		updateDate();
 		
 		
 		pickDate.setOnClickListener(new OnClickListener() {
@@ -110,6 +112,16 @@ public class FormActivity extends Activity {
 		
 	}
 	
+	private void updateDate() {
+	    dateDisplay.setText(
+	        new StringBuilder()
+	        //Constant Month is 0 based so we have to add 1
+	       .append("Mes - Día - Año: ")
+	       .append(month + 1).append("-")
+	       .append(day).append("-")
+	       .append(year).append(" "));
+	}
+	
 	//Actions called every time button "Set" is clicked
 	DatePickerDialog.OnDateSetListener mDateSetListener =
 	   new DatePickerDialog.OnDateSetListener() {
@@ -119,6 +131,7 @@ public class FormActivity extends Activity {
 	            year = yearOf;
 	            month = monthOfYear;
 	            day = dayOfMonth;
+	            updateDate();
 	     }
 
 	};
@@ -132,6 +145,9 @@ public class FormActivity extends Activity {
 	     return null;
 	}
 	
+	//private void check(){
+		//check if there are dates of user in the app yet
+	//}
 	
 	public void save(){
 		
@@ -143,8 +159,6 @@ public class FormActivity extends Activity {
         height = Float.parseFloat(editHeight.getText().toString());
         EditText editText = (EditText) findViewById(R.id.editTextWeigth);
         weight = Float.parseFloat(editText.getText().toString());
-		RadioButton radioSex = (RadioButton)findViewById(R.id.radioWoman);
-        sex = radioSex.isChecked();
         
         sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
 		editor = sharedPref.edit();
@@ -154,7 +168,6 @@ public class FormActivity extends Activity {
 		editor.putInt(getString(R.string.day), day);
 		editor.putFloat(getString(R.string.height), height);
 		editor.putFloat(getString(R.string.weight), weight);
-		editor.putBoolean(getString(R.string.sex), sex);
 		editor.commit();
 	}
  
