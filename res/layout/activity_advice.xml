@@ -16,10 +16,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="@string/RecomendationText"
-        android:textSize="18sp" />
-/>
-    
-    
+        android:textSize="18sp" />   
 
     <ImageView
         android:id="@+id/recomendationImage"
