@@ -16,12 +16,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="@string/RecomendationText"
-        android:textSize="18sp" />   
+        android:textAlignment="gravity"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
 
     <ImageView
         android:id="@+id/recomendationImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/numberRecomendation" />
@@ -34,7 +37,20 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/recomendationImage"
-        android:textSize="18sp" />
+        android:textAlignment="gravity"
+        android:textSize="19sp" />
+
+    <Button
+        android:id="@+id/nextButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/prevButton"
+        android:background="@anim/custombutton1"
+        android:onClick="nextRecomendation"
+        android:text="@string/Next" />
 
     <Button
         android:id="@+id/prevButton"
@@ -44,19 +60,9 @@
         android:layout_alignBaseline="@+id/nextButton"
         android:layout_alignBottom="@+id/nextButton"
         android:layout_alignLeft="@+id/recomendationText"
+        android:layout_marginLeft="56dp"
         android:background="@anim/custombutton1"
         android:onClick="prevRecomendation"
         android:text="@string/Previous" />
-
-    <Button
-        android:id="@+id/nextButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/recomendationText"
-        android:background="@anim/custombutton1"
-        android:onClick="nextRecomendation"
-        android:text="@string/Next" />
 
 </RelativeLayout>
