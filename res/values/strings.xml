@@ -22,9 +22,9 @@
     <string name="weightB">peso</string>
     <string name="info_title">Informacion general</string>
     <string name="info_condition">test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 test1 </string>
-    <string name="info_thin">informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados informacion para delgados </string>
-    <string name="info_normal">informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal informacion para normal </string>
-    <string name="info_fat">informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo informacion para gordo </string>
+    <string name="info_thin">Tu indice de masa corporal (IMC) indica que estas por debajo del peso promedio para tu estatura.</string>
+    <string name="info_normal">Tu indice de masa corporal (IMC) indica que posees un peso adecuado para tu estatura.</string>
+    <string name="info_fat">Tu indice de masa corporal (IMC) indica que estas por encima del peso promedio para tu estatura.</string>
     <string name="pickDate">Ingresar Fecha</string>
     <string name="user_profile">UserProfile</string>
     <string name="name">name</string>
@@ -53,4 +53,5 @@
 	<string name = "Cereals">Arroz, pasta, pan, arepa, maíz, cebada, avena.</string>
 	<string name="vitamins">Vitaminas</string>
 	<string name="minerals">Minerales</string>
+	<string name="whereto">Lo puedes encontrar en:</string>
 </resources>

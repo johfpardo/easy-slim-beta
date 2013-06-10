@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class NutrientDetail extends Activity {
 
-	private Nutrient mineral;
+	private Nutrient nutrients;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -21,7 +21,7 @@ public class NutrientDetail extends Activity {
 		//get nutrient to load
 		Intent intent = getIntent();
 		String message = intent.getStringExtra(NutrientsListActivity.EXTRA_MESSAGE);		
-		mineral = new NutrientDao(this).getNutrientByName(message);
+		nutrients = new NutrientDao(this).getNutrientByName(message);
 		
 		setNutrientContent();
 	}
@@ -29,11 +29,12 @@ public class NutrientDetail extends Activity {
 	private void setNutrientContent() {
 		// TODO Auto-generated method stub
 		TextView nameView = (TextView) findViewById(R.id.mineralNameView);		
-		nameView.setText(mineral.getName());
+		nameView.setText(nutrients.getName());
 		TextView descriptionView = (TextView) findViewById(R.id.mineralDescriptionView);		
-		descriptionView.setText(mineral.getDescription());
+		descriptionView.setText(nutrients.getDescription());
 		TextView foodView = (TextView) findViewById(R.id.mineralFoodView);		
-		foodView.setText(mineral.getFoodList());		
+		foodView.append("\n");
+		foodView.append(nutrients.getFoodList());			
 		
 	}
 
