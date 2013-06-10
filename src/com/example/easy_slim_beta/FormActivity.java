@@ -1,7 +1,6 @@
 package com.example.easy_slim_beta;
 
 import java.util.Calendar;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -50,7 +49,7 @@ public class FormActivity extends Activity {
 		dateDisplay = (TextView) findViewById(R.id.textViewDate);
 		pickDate = (Button) findViewById(R.id.pickDate);
 		button = (Button) findViewById(R.id.button1);
-		updateDate();
+		load();
 		
 		
 		pickDate.setOnClickListener(new OnClickListener() {
@@ -106,7 +105,7 @@ public class FormActivity extends Activity {
  
 		//This will show us the current date
 		final Calendar c = Calendar.getInstance();
-		year = c.get(Calendar.YEAR);
+		year = c.get(Calendar.YEAR) - 15; //Mayores de 15 años 
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DAY_OF_MONTH);
 		
@@ -125,16 +124,20 @@ public class FormActivity extends Activity {
 	//Actions called every time button "Set" is clicked
 	DatePickerDialog.OnDateSetListener mDateSetListener =
 	   new DatePickerDialog.OnDateSetListener() {
-	 
+			
+		
+		
 		@Override
 		public void onDateSet(DatePicker view, int yearOf, int monthOfYear, int dayOfMonth) {
-	            year = yearOf;
+	            
+				year = yearOf;
 	            month = monthOfYear;
 	            day = dayOfMonth;
 	            updateDate();
 	     }
 
 	};
+	
 	
 	@Override
 	protected Dialog onCreateDialog(int id) {
@@ -145,9 +148,22 @@ public class FormActivity extends Activity {
 	     return null;
 	}
 	
-	//private void check(){
-		//check if there are dates of user in the app yet
-	//}
+	public void load (){
+		sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
+		name = sharedPref.getString(getString(R.string.name), "");
+		EditText editName = (EditText) findViewById(R.id.editTextName);
+		editName.setText(name);
+		year = sharedPref.getInt(getString(R.string.year), 0);
+		month = sharedPref.getInt(getString(R.string.month), 0);
+		day = sharedPref.getInt(getString(R.string.day), 0);
+		updateDate();
+		height = sharedPref.getFloat(getString(R.string.height), 0);
+		EditText editHeight = (EditText) findViewById(R.id.editTextHeight);
+		editHeight.setText(Integer.toString((int)height));
+		weight = sharedPref.getFloat(getString(R.string.weight), 0);
+		EditText editWeight= (EditText) findViewById(R.id.editTextWeigth);
+		editWeight.setText(Integer.toString((int)weight));
+	}
 	
 	public void save(){
 		
@@ -157,8 +173,8 @@ public class FormActivity extends Activity {
         name = editName.getText().toString();
         EditText editHeight = (EditText) findViewById(R.id.editTextHeight);
         height = Float.parseFloat(editHeight.getText().toString());
-        EditText editText = (EditText) findViewById(R.id.editTextWeigth);
-        weight = Float.parseFloat(editText.getText().toString());
+        EditText editWeight= (EditText) findViewById(R.id.editTextWeigth);
+        weight = Float.parseFloat(editWeight.getText().toString());
         
         sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
 		editor = sharedPref.edit();

@@ -25,6 +25,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu);
+		load();
 		adView = (AdView)findViewById(R.id.ad);
 		adView.loadAd(new AdRequest());
 		
@@ -77,13 +78,15 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		int day = sharedPref.getInt(getString(R.string.day), 0);
 		float height = sharedPref.getFloat(getString(R.string.height), 0);
 		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
+		if(height == 0 || weight == 0){
+			startActivity(new Intent(this, FormActivity.class));
+		}
 		
 		user.set(name, year, month, day, height, weight);	
 		
 		TextView nameview = (TextView) findViewById(R.id.welcomeView);
 		nameview.append("  ");
 		nameview.append(user.getName());
-		
 	}
 }
 	

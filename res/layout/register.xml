@@ -55,7 +55,7 @@
         android:layout_width="114dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textViewWeight"
@@ -69,7 +69,7 @@
         android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/button1"
