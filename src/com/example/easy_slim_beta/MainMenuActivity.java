@@ -60,7 +60,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
             	startActivity(new Intent(this, FormActivity.class));
             	break;	
             case R.id.buttonPorcion:
-            	startActivity(new Intent(this, PorcionesActivity.class));
+            	startActivity(new Intent(this, PortionsActivity.class));
             	break;	
             case R.id.buttonCalorias:
             	startActivity(new Intent(this, CaloriasActivity.class));

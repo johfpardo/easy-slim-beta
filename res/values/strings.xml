@@ -43,5 +43,12 @@
     <string name="imcTitleInfo">IMC</string>
     <string name="RecomendationText">Recomendación 0 de 0</string>
     <string name="portions">Porciones</string>
-
+    <string name="Fruits">Mango, durazno, fresa, banano, uva, manzana, papaya, lulo, maracuyá, ciruelas.</string>
+	<string name ="Roots">Yuca, papa, arracacha, plátano, ñame.</string>
+	<string name = "Vegetables">Zanahoria, tomate, lechuga, pimentón, arveja verde, habichuelas, auyama, brócoli, espinacas, acelga, remolacha, repollo.</string>
+	<string name = "Fat">Aceite, mantequilla, margarina, manteca.</string>
+	<string name = "Sugar">Azúcar, arequipe, bocadillo.</string>
+	<string name = "Meat">Carne de res, carne de cerdo pollo, pescado, vísceras, huevo, lenteja, garbanzo, fríjol, arveja seca.</string>
+	<string name = "Dairy">Leche, yogurt, kumis, queso, cuajada.</string>
+	<string name = "Cereals">Arroz, pasta, pan, arepa, maíz, cebada, avena.</string>
 </resources>

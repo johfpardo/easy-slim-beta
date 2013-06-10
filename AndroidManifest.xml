@@ -38,7 +38,7 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.PorcionesActivity"
+            android:name="com.example.easy_slim_beta.PortionsActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -58,7 +58,7 @@
             android:label="@string/app_name" >
         </activity>
                 <activity
-            android:name="com.example.easy_slim_beta.PortionsActivity"
+            android:name="com.example.easy_slim_beta.InfoPortionActivity"
             android:label="@string/app_name" >
         </activity>
          <activity android:name="com.google.ads.AdActivity"
