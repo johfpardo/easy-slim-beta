@@ -2,7 +2,7 @@ package com.example.easy_slim_beta;
 
 import java.util.List;
 
-import easy_slim_beta.entities.Portion;
+//import easy_slim_beta.entities.Portion;
 import easy_slim_beta.entities.Recomendation;
 import android.app.Activity;
 import android.content.Intent;
