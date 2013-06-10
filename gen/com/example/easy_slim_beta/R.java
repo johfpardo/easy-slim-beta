@@ -62,9 +62,18 @@ public final class R {
         public static final int normalhuman=0x7f020017;
         public static final int plate=0x7f020018;
         public static final int protein=0x7f020019;
-        public static final int r_nutritionist=0x7f02001a;
-        public static final int thinhuman=0x7f02001b;
-        public static final int vegetables=0x7f02001c;
+        public static final int r_breakfast=0x7f02001a;
+        public static final int r_fish=0x7f02001b;
+        public static final int r_food=0x7f02001c;
+        public static final int r_fruits=0x7f02001d;
+        public static final int r_fruitsandvegetables=0x7f02001e;
+        public static final int r_milkshake=0x7f02001f;
+        public static final int r_nosmoking=0x7f020020;
+        public static final int r_nutritionist=0x7f020021;
+        public static final int r_sport=0x7f020022;
+        public static final int r_water=0x7f020023;
+        public static final int thinhuman=0x7f020024;
+        public static final int vegetables=0x7f020025;
     }
     public static final class id {
         public static final int InnerRelativeLayout=0x7f090008;
