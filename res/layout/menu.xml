@@ -94,7 +94,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         app:adSize="SMART_BANNER"
-        app:adUnitId="e9fbd061f5ad4ff7" >
+        app:adUnitId="e1d655f7344a4197" >
     </com.google.ads.AdView>
         
 </RelativeLayout>
