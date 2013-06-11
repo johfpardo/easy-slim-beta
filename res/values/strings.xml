@@ -54,4 +54,6 @@
 	<string name="vitamins">Vitaminas</string>
 	<string name="minerals">Minerales</string>
 	<string name="whereto">Lo puedes encontrar en:</string>
+	<string name="menunutrients">Consultar nutrientes</string>
+	<string name="menuinfo">Información general</string>
 </resources>

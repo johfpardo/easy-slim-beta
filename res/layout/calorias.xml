@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:layout_height="match_parent"    
     android:background="@drawable/background"
     android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/lib/com.google.ads">
+	<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"           
+            >
+	    <Button
+	        android:id="@+id/vitaminsButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@anim/custombuttoncal"
+	        android:gravity="center"        
+	        android:onClick="vitaminsClick"
+	        android:text="@string/vitamins" />
+	
+	    <Button
+	        android:id="@+id/mineralsButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toRightOf="@+id/vitaminsButton"
+	        android:background="@anim/custombuttoncal"
+	        android:gravity="center"
+	        android:onClick="mineralsClick"
+	        android:text="@string/minerals" />
+	</RelativeLayout>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+			<TextView
+			        android:id="@+id/typeView"
+			        android:layout_width="wrap_content"
+			        android:layout_height="44dp"
+			        android:text="@string/none"
+			        android:textAppearance="?android:attr/textAppearanceLarge" />
+			
+			    <ListView
+			        android:layout_below="@+id/typeView"
+			        android:id="@+id/listview"
+			        android:layout_width="wrap_content"
+			        android:layout_height="400dp" />			  
 
-    <Button
-        android:id="@+id/vitaminsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:background="@anim/custombutton"
-        android:gravity="center"        
-        android:onClick="vitaminsClick"
-        android:text="@string/vitamins" />
-
-    <Button
-        android:id="@+id/mineralsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@anim/custombutton"
-        android:gravity="center"
-		android:layout_marginTop="10dp"
-        android:onClick="mineralsClick"
-        android:text="@string/minerals" />
+     </RelativeLayout>
 
     <com.google.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
@@ -34,6 +54,7 @@
         android:layout_marginBottom="0dp"
         app:adSize="SMART_BANNER"
         app:adUnitId="e9fbd061f5ad4ff7" >
+
     </com.google.ads.AdView>
 
 </LinearLayout>

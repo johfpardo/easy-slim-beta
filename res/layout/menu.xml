@@ -15,7 +15,7 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="10dp"
         android:background="@anim/custombutton"
-        android:text="IMC" />
+        android:text="@string/menuinfo" />
 
     <Button
         android:id="@+id/buttonModif"
@@ -51,7 +51,7 @@
         android:layout_centerVertical="true"
         android:layout_marginTop="10dp"
         android:background="@anim/custombutton"
-        android:text="Buscador de Calorias" />
+        android:text="@string/menunutrients" />
 
     <Button
         android:id="@+id/buttonRecomend"
