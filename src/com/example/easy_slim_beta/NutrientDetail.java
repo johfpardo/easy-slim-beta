@@ -20,7 +20,7 @@ public class NutrientDetail extends Activity {
 		
 		//get nutrient to load
 		Intent intent = getIntent();
-		String message = intent.getStringExtra(NutrientsListActivity.EXTRA_MESSAGE);		
+		String message = intent.getStringExtra(CaloriasActivity.EXTRA_MESSAGE);		
 		nutrients = new NutrientDao(this).getNutrientByName(message);
 		
 		setNutrientContent();
