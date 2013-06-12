@@ -15,6 +15,8 @@ public class PortionsActivity extends Activity implements OnClickListener{
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.porciones);
+		
+		setTitle(R.string.portions);
 				
 		Button boton = (Button)findViewById(R.id.button1);
 		Button boton1 = (Button)findViewById(R.id.button2);
@@ -90,7 +92,7 @@ public class PortionsActivity extends Activity implements OnClickListener{
 
 		case R.id.button8:
 			//Fat			
-			i.putExtra("Type", R.id.button8);
+			i.putExtra("Type", "Fat");
 			startActivityForResult(i, 1);
 			break;
 
