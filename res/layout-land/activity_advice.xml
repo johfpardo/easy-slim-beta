@@ -23,46 +23,49 @@
 
     <ImageView
         android:id="@+id/recomendationImage"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/numberRecomendation" />
 
     <TextView
         android:id="@+id/recomendationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/prevButton"
-        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/recomendationImage"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/recomendationImage"
+        android:layout_below="@+id/numberRecomendation"
+        android:layout_toRightOf="@+id/recomendationImage"
         android:textAlignment="gravity"
         android:textSize="19sp" />
 
-    <Button
-        android:id="@+id/nextButton"
-        style="?android:attr/buttonStyleSmall"
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="39dp"
-        android:layout_toRightOf="@+id/prevButton"
-        android:background="@anim/custombutton1"
-        android:onClick="nextRecomendation"
-        android:text="@string/Next" />
+        android:layout_centerHorizontal="true" >
 
-    <Button
-        android:id="@+id/prevButton"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/nextButton"
-        android:layout_alignBottom="@+id/nextButton"
-        android:layout_alignLeft="@+id/recomendationText"
-        android:layout_marginLeft="56dp"
-        android:background="@anim/custombutton1"
-        android:onClick="prevRecomendation"
-        android:text="@string/Previous" />
+        <Button
+            android:id="@+id/prevButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@anim/custombutton1"
+            android:onClick="prevRecomendation"
+            android:text="@string/Previous" />
+
+        <Button
+            android:id="@+id/nextButton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/prevButton"
+            android:layout_marginLeft="50dp"
+            android:background="@anim/custombutton1"
+            android:onClick="nextRecomendation"
+            android:text="@string/Next" />
+    </RelativeLayout>
 
 </RelativeLayout>
