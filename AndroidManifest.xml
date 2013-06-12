@@ -50,11 +50,7 @@
             android:label="@string/title_activity_advice" >
         </activity>
         <activity
-            android:name="com.example.easy_slim_beta.VitaminasListActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.example.easy_slim_beta.MineralesListActivity"
+            android:name="com.example.easy_slim_beta.NutrientDetail"
             android:label="@string/app_name" >
         </activity>
                 <activity
