@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_title"
+        android:textSize="26sp" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </TableRow>
+
+    <com.google.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="e1d655f7344a4197" >
+    </com.google.ads.AdView>
+
+    <ImageView
+        android:id="@+id/imageInfo"
+        android:layout_width="63dp"
+        android:layout_height="137dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:contentDescription="@string/none"
+        android:src="@drawable/human" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ad"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/heightTitleInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotabletitle"
+                android:gravity="center"
+                android:text="@string/heightTitleInfo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weightTitleInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotabletitle"
+                android:gravity="center"
+                android:text="@string/weightTitleInfo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imcTitleInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotabletitle"
+                android:gravity="center"
+                android:text="@string/imcTitleInfo"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" >
+
+            <TextView
+                android:id="@+id/heightInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotable"
+                android:gravity="center"
+                android:text="@string/none"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/weightInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotable"
+                android:gravity="center"
+                android:text="@string/none"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/imcInfo"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.04"
+                android:background="@drawable/infotable"
+                android:gravity="center"
+                android:text="@string/none"
+                android:textSize="16sp" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignTop="@+id/imageInfo"
+        android:layout_toRightOf="@+id/imageInfo"
+        android:orientation="vertical" >
+
+        <TextView            
+            android:id="@+id/textInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.70"
+            android:text="@string/info_condition"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>
