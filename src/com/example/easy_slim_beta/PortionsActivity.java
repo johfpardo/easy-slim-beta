@@ -14,7 +14,7 @@ public class PortionsActivity extends Activity implements OnClickListener{
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.porciones);
+		setContentView(R.layout.portions);
 		
 		setTitle(R.string.portions);
 				
