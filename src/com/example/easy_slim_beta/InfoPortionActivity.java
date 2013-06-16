@@ -15,7 +15,7 @@ public class InfoPortionActivity extends Activity{
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.infoporcion);
+		setContentView(R.layout.infoportion);
 		
 		index = 0;
 
@@ -27,54 +27,65 @@ public class InfoPortionActivity extends Activity{
 	
 	public void setPortion(String msg, int index) {
 		TextView t = (TextView) findViewById(R.id.portionText);
-		ImageView ri = (ImageView) findViewById(R.id.portionImage);
+		ImageView ri = (ImageView) findViewById(R.id.foodImage);
+		ImageView rj = (ImageView) findViewById(R.id.portionImage);
+		
+		String s = "\n Tamaño Porción: ";
 		
 		if(msg.contentEquals("Vegetables") || index == 0){
 			setTitle("Hortalizas, Verduras Y Leguminosas Verdes");
-			t.setText(getString(R.string.Vegetables));
-			ri.setImageResource(R.drawable.r_fruitsandvegetables);
+			t.setText(getString(R.string.Vegetables) + s);
+			ri.setImageResource(R.drawable.r_vegetables2);
+			rj.setImageResource(R.drawable.vegetables);
 		}
 		
-		if(msg.contentEquals("Fruits") || index == 1){               
-			setTitle("Frutas");
-			t.setText(getString(R.string.Fruits));
-			ri.setImageResource(R.drawable.r_fruits);
-		}
-		
-		if(msg.contentEquals("Cereals") || index == 2){
+		if(msg.contentEquals("Cereals") || index == 1){
 			setTitle("Cereales");
-			t.setText(getString(R.string.Cereals));
-			ri.setImageResource(R.drawable.grains);
+			t.setText(getString(R.string.Cereals) + s);
+			ri.setImageResource(R.drawable.r_cereals);
+			rj.setImageResource(R.drawable.cereals);
 		}
 		
+		if(msg.contentEquals("Fruits") || index == 2){               
+			setTitle("Frutas");
+			t.setText(getString(R.string.Fruits) + s);
+			ri.setImageResource(R.drawable.r_fruits2);
+			rj.setImageResource(R.drawable.fruits);
+		}
+				
 		if(msg.contentEquals("Roots") || index == 3){
 			setTitle("Raíces, Tubérculos Y Plátanos");
-			t.setText(getString(R.string.Roots));
-			ri.setImageResource(R.drawable.protein);
+			t.setText(getString(R.string.Roots) + s);
+			ri.setImageResource(R.drawable.r_roots);
+			rj.setImageResource(R.drawable.roots);
 		}
 		
 		if(msg.contentEquals("meategg") || index == 4){
 			setTitle("Carnes, Huevos, Leguminosas");
-			t.setText(getString(R.string.Meat));
-			ri.setImageResource(R.drawable.protein);
+			t.setText(getString(R.string.Meat) + s);
+			ri.setImageResource(R.drawable.r_protein);
+			rj.setImageResource(R.drawable.protein);
 		}
 		
 		if(msg.contentEquals("Dairy") || index == 5){
 			setTitle("Lacteos");
-			t.setText(getString(R.string.Dairy));
-			ri.setImageResource(R.drawable.dairy);
+			t.setText(getString(R.string.Dairy)  + s);
+			ri.setImageResource(R.drawable.r_dairy);
+			rj.setImageResource(R.drawable.dairy);
 		}
 		
 		if(msg.contentEquals("Sugars") || index == 6){
 			setTitle("Azucares y Dulces");
-			t.setText(getString(R.string.Sugar));
-			ri.setImageResource(R.drawable.bpeach);
+			t.setText(getString(R.string.Sugar) + s);
+			ri.setImageResource(R.drawable.r_sugars);
+			rj.setImageResource(R.drawable.sugars);
 		}
 		
 		if(msg.contentEquals("Fat") || index == 7){
 			setTitle("Grasas");
-			t.setText(getString(R.string.Fat));
-			ri.setImageResource(R.drawable.fathuman);
+			t.setText(getString(R.string.Fat) + s);
+			ri.setImageResource(R.drawable.r_fat);
+			rj.setImageResource(R.drawable.fat);
 		}		
 	}
 	
