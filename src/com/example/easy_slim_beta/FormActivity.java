@@ -1,5 +1,7 @@
 package com.example.easy_slim_beta;
 
+import java.io.FileOutputStream;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -68,7 +70,7 @@ public class FormActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				try{
-					save();
+					save();					
 					finish();               
 					}
 					catch(Exception e){
@@ -103,7 +105,7 @@ public class FormActivity extends Activity {
  
 		//This will show us the current date
 		final Calendar c = Calendar.getInstance();
-		year = c.get(Calendar.YEAR) - 15; //Mayores de 15 años 
+		year = c.get(Calendar.YEAR) - 15; //Mayores de 15 aï¿½os 
 		month = c.get(Calendar.MONTH);
 		day = c.get(Calendar.DAY_OF_MONTH);
 		
@@ -113,7 +115,7 @@ public class FormActivity extends Activity {
 	    dateDisplay.setText(
 	        new StringBuilder()
 	        //Constant Month is 0 based so we have to add 1
-	       .append("Mes - Día - Año: ")
+	       .append("Mes - Dï¿½a - Aï¿½o: ")
 	       .append(month + 1).append("-")
 	       .append(day).append("-")
 	       .append(year).append(" "));
@@ -174,6 +176,8 @@ public class FormActivity extends Activity {
         EditText editWeight= (EditText) findViewById(R.id.editTextWeigth);
         weight = Float.parseFloat(editWeight.getText().toString());
         
+        saveImc(height, weight);
+        
         sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
 		editor = sharedPref.edit();
 		editor.putString(getString(R.string.name),name);
@@ -183,6 +187,27 @@ public class FormActivity extends Activity {
 		editor.putFloat(getString(R.string.height), height);
 		editor.putFloat(getString(R.string.weight), weight);
 		editor.commit();
+	}
+
+
+
+	private void saveImc(float height2, float weight2) {
+		// TODO Auto-generated method stub
+		float imc2 = weight2/((height2/100)*(height2/100));
+		//persist object in database
+		DecimalFormat formImc = new DecimalFormat("0.0");
+		String FILENAME = "ImcHistory";		
+		String imcText = "&" + formImc.format(imc2);
+		FileOutputStream fos;
+		try {
+			fos = openFileOutput(FILENAME, Context.MODE_APPEND);
+			fos.write(imcText.getBytes());
+			fos.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
  
 }

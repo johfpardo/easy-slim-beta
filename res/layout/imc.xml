@@ -22,11 +22,20 @@
 
     <TextView
         android:id="@+id/textInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.04"
+        android:layout_weight="1"
         android:textSize="18sp"
         android:text="@string/info_condition" />
+    <com.androidplot.xy.XYPlot
+            android:id="@+id/mySimpleXYPlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="2"
+            title="Historial IMC"/>
 
     <TableRow
         android:layout_width="match_parent"

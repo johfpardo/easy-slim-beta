@@ -123,6 +123,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/linearLayout1"
@@ -130,13 +131,24 @@
         android:layout_toRightOf="@+id/imageInfo"
         android:orientation="vertical" >
 
-        <TextView            
+        <TextView
             android:id="@+id/textInfo"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="0.70"
             android:text="@string/info_condition"
             android:textSize="18sp" />
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/mySimpleXYPlot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="2"
+            title="Historial IMC"/>
     </LinearLayout>
+
+
 
 </RelativeLayout>
