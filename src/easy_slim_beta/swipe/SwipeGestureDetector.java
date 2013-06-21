@@ -22,12 +22,12 @@ public class SwipeGestureDetector extends SimpleOnGestureListener {
     		
     		if (diffAbs > SWIPE_MAX_OFF_PATH) return false;
     		
-    		// Left swipe
-    		if (diff > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY)
-    			activity.onLeftSwipe(null);
     		// Right swipe
-    		else if (-diff > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY)
+    		if (diff > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY)
     			activity.onRightSwipe(null);
+    		// Left swipe
+    		else if (-diff > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY)
+    			activity.onLeftSwipe(null);
     		
     	} catch (Exception e) { }
     	return false;

@@ -19,7 +19,10 @@ public class AdviceActivity extends Activity  implements Swipeable {
 	private List<Recomendation> recomendations;
 	// index or current recommendation
 	private int index = 0;
-
+	// variable for gesture detector
+	@SuppressWarnings("deprecation")
+	GestureDetector gestureDetector = new GestureDetector(new SwipeGestureDetector(this));
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,10 +36,8 @@ public class AdviceActivity extends Activity  implements Swipeable {
 	}
 	
 	// let the user navigate with gestures on screen
-	@SuppressWarnings("deprecation")
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		GestureDetector gestureDetector = new GestureDetector(new SwipeGestureDetector(this));
 		if (gestureDetector.onTouchEvent(event)) return true;
 		return super.onTouchEvent(event);
 	}
