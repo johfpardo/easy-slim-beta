@@ -22,16 +22,18 @@ import com.androidplot.xy.PointLabelFormatter;
 import com.androidplot.xy.SimpleXYSeries;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
-import com.google.ads.AdRequest;
-import com.google.ads.AdView;
 
 import easy_slim_beta.entities.UserProfile;
 
 public class InfoActivity extends Activity{
 	SharedPreferences sharedPref;
-	protected AdView adView;
 	UserProfile profile = new UserProfile();
 	private List<Double> imcList = new ArrayList<Double>();
+	private List<Double> imcNormal = new ArrayList<Double>();
+	private List<Double> imcThin = new ArrayList<Double>();
+	private List<Double> imcVeryThin = new ArrayList<Double>();
+	private List<Double> imcfat = new ArrayList<Double>();
+	private List<Double> imcObese = new ArrayList<Double>();
     private XYPlot graficaImc;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -42,15 +44,60 @@ public class InfoActivity extends Activity{
 		loadImc();
 		setContent();
 		paintGraph();
-		adView = (AdView)findViewById(R.id.ad);
-		adView.loadAd(new AdRequest());
 	}	
 	
 	private void paintGraph() {
 		// initialize our XYPlot reference:
         graficaImc = (XYPlot) findViewById(R.id.mySimpleXYPlot);
- 
-        // Turn the above arrays into XYSeries':
+        
+        //A—ADE COLORES A LOS LIMITES
+        XYSeries serieslimit = new SimpleXYSeries(
+                imcNormal,          // SimpleXYSeries takes a List so turn our array into a List
+                SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
+                "Normal");                             // Set the display title of the series
+        PointLabelFormatter pointlimit = new PointLabelFormatter(0);
+        
+        XYSeries seriesThinlimit = new SimpleXYSeries(
+                imcThin,          // SimpleXYSeries takes a List so turn our array into a List
+                SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
+                "Delgado");                             // Set the display title of the series
+
+        XYSeries seriesVeryThinlimit = new SimpleXYSeries(
+                imcVeryThin,          // SimpleXYSeries takes a List so turn our array into a List
+                SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
+                "Muy delgado");        
+        XYSeries seriesObeselimit = new SimpleXYSeries(
+                imcObese,          // SimpleXYSeries takes a List so turn our array into a List
+                SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
+                "Obeso");
+
+        XYSeries seriesFatlimit = new SimpleXYSeries(
+                imcfat,          // SimpleXYSeries takes a List so turn our array into a List
+                SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
+                "Sobrepeso");        
+        // Create a formatter to use for drawing a series using LineAndPointRenderer:
+        LineAndPointFormatter seriesLimitFormat = new LineAndPointFormatter(
+                Color.rgb(127, 255, 0),                   // line color
+                null,                   // point color
+                Color.rgb(127, 255, 0),
+                pointlimit);                                  // fill color (none)
+
+        PointLabelFormatter pointbadlimit = new PointLabelFormatter(0);
+        // Create a formatter to use for drawing a series using LineAndPointRenderer:
+        LineAndPointFormatter seriesVeryBadLimitFormat = new LineAndPointFormatter(
+                Color.rgb(255, 99, 71),                   // line color
+                null,                  // point color
+                Color.rgb(255, 99, 71),
+                pointbadlimit);                                  // fill color (none)
+        
+        // Create a formatter to use for drawing a series using LineAndPointRenderer:
+        LineAndPointFormatter seriesBadLimitFormat = new LineAndPointFormatter(
+                Color.rgb(255,165,0),                   // line color
+                null,                  // point color
+                Color.rgb(255, 165, 0),
+                pointbadlimit);
+        
+        // A—ADE LA LINEA DEL ARREGLO
         XYSeries series1 = new SimpleXYSeries(
                 imcList,          // SimpleXYSeries takes a List so turn our array into a List
                 SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
@@ -59,23 +106,32 @@ public class InfoActivity extends Activity{
         PointLabelFormatter point = new PointLabelFormatter(0);
         // Create a formatter to use for drawing a series using LineAndPointRenderer:
         LineAndPointFormatter series1Format = new LineAndPointFormatter(
-                Color.rgb(0, 200, 0),                   // line color
-                Color.rgb(0, 100, 0),                   // point color
+                Color.rgb(0, 0, 139),                   // line color
+                Color.rgb(0, 0, 0),                   // point color
                 null,
                 point);                                  // fill color (none)
  
-        // add a new series' to the xyplot:
+        // add a series' to the xyplot:
+        graficaImc.addSeries(seriesObeselimit, seriesVeryBadLimitFormat);
+        graficaImc.addSeries(seriesFatlimit, seriesBadLimitFormat);
+        graficaImc.addSeries(serieslimit, seriesLimitFormat);
+        graficaImc.addSeries(seriesThinlimit, seriesBadLimitFormat);
+        graficaImc.addSeries(seriesVeryThinlimit, seriesVeryBadLimitFormat);
         graficaImc.addSeries(series1, series1Format);
         //set domain properties
         graficaImc.setDomainStep(XYStepMode.INCREMENT_BY_VAL,1);
-        graficaImc.setDomainLabel("Medici√≥n");
+        graficaImc.setDomainLabel("Medicion");        
+        graficaImc.getGraphWidget().getDomainLabelPaint().setTextSize(20);
+        //graficaImc.getDomainLabelWidget().setSize(new SizeMetrics(20, SizeLayoutType.ABSOLUTE, 20, SizeLayoutType.ABSOLUTE));
         //set range propeties
-        graficaImc.setRangeBoundaries(0, 50, BoundaryMode.FIXED);
+        graficaImc.setRangeStep(XYStepMode.INCREMENT_BY_VAL,10);
+        graficaImc.setRangeBoundaries(10, 40, BoundaryMode.FIXED);
         graficaImc.setRangeLabel("IMC");
+        graficaImc.getGraphWidget().getRangeLabelPaint().setTextSize(20);    
         
         graficaImc.setTitle("historial");
         // reduce the number of range labels
-        graficaImc.setTicksPerRangeLabel(3);
+        //graficaImc.setTicksPerRangeLabel(3);
 		
 	}
 
@@ -101,6 +157,11 @@ public class InfoActivity extends Activity{
 		
 		for(int i=1;i<lista.size();i++){			
 			imcList.add(Double.parseDouble(lista.get(i)));
+			imcNormal.add((double) 25);
+			imcThin.add((double) 18.45);
+			imcVeryThin.add((double) 17);
+			imcObese.add((double) 40);
+			imcfat.add((double) 30);
 		}
 		
 	}
