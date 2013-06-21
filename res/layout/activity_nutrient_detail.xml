@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".NutrientDetail" >
+
+    <TextView
+        android:id="@+id/mineralNameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/none"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/mineralDescriptionView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/mineralNameView"                     
+        android:text="@string/none"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/mineralFoodView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mineralDescriptionView"
+        android:layout_centerVertical="true"
+        android:text="@string/whereto"
+        android:background="@drawable/infotable"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
