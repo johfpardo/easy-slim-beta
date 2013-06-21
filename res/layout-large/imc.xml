@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/info_title"
-        android:textSize="26sp" />
+        android:textSize="32sp" />
 
     <ImageView
         android:id="@+id/imageInfo"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:textSize="18sp"
+        android:textSize="26sp"
         android:text="@string/info_condition" />
     <com.androidplot.xy.XYPlot
             android:id="@+id/mySimpleXYPlot"
@@ -50,7 +50,7 @@
 		    android:background="@drawable/infotabletitle"
 		    android:text="@string/heightTitleInfo"
 		    android:gravity="center"
-		    android:textSize="16sp"
+		    android:textSize="22sp"
 		    android:textStyle="bold" />
 		
 		<TextView
@@ -60,7 +60,7 @@
         android:layout_weight="1.04"
         android:text="@string/weightTitleInfo"
         android:gravity="center"
-        android:textSize="16sp" 
+        android:textSize="22sp" 
         android:background="@drawable/infotabletitle"
         android:textStyle="bold"/>
 		
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.04"
         android:text="@string/imcTitleInfo"
-        android:textSize="16sp" 
+        android:textSize="22sp" 
         android:gravity="center"
         android:background="@drawable/infotabletitle"
         android:textStyle="bold"/>
@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.04"
         android:text="@string/none"
-        android:textSize="16sp" 
+        android:textSize="22sp" 
         android:gravity="center"
         android:background="@drawable/infotable"/>
         
@@ -98,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.04"
         android:text="@string/none"
-        android:textSize="16sp" 
+        android:textSize="22sp" 
         android:gravity="center"
         android:background="@drawable/infotable"/>
         
@@ -108,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1.04"
         android:text="@string/none"
-        android:textSize="16sp" 
+        android:textSize="22sp" 
         android:gravity="center"
         android:background="@drawable/infotable"/>
         
