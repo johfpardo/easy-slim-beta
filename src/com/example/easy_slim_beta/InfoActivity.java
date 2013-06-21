@@ -2,10 +2,14 @@ package com.example.easy_slim_beta;
 
 import java.io.FileInputStream;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,6 +29,7 @@ import com.androidplot.xy.XYStepMode;
 
 import easy_slim_beta.entities.UserProfile;
 
+@SuppressLint("NewApi")
 public class InfoActivity extends Activity{
 	SharedPreferences sharedPref;
 	UserProfile profile = new UserProfile();
@@ -50,7 +55,7 @@ public class InfoActivity extends Activity{
 		// initialize our XYPlot reference:
         graficaImc = (XYPlot) findViewById(R.id.mySimpleXYPlot);
         
-        //AÑADE COLORES A LOS LIMITES
+        //AADE COLORES A LOS LIMITES
         XYSeries serieslimit = new SimpleXYSeries(
                 imcNormal,          // SimpleXYSeries takes a List so turn our array into a List
                 SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
@@ -97,7 +102,7 @@ public class InfoActivity extends Activity{
                 Color.rgb(255, 165, 0),
                 pointbadlimit);
         
-        // AÑADE LA LINEA DEL ARREGLO
+        // AADE LA LINEA DEL ARREGLO
         XYSeries series1 = new SimpleXYSeries(
                 imcList,          // SimpleXYSeries takes a List so turn our array into a List
                 SimpleXYSeries.ArrayFormat.Y_VALS_ONLY, // Y_VALS_ONLY means use the element index as the x value
@@ -152,11 +157,17 @@ public class InfoActivity extends Activity{
 			e.printStackTrace();
 		}
 		
+		NumberFormat nf = NumberFormat.getInstance(Locale.FRENCH);
 		List<String> lista = Arrays.asList(value.split("&"));		
 //		lista.remove("");
 		
 		for(int i=1;i<lista.size();i++){			
-			imcList.add(Double.parseDouble(lista.get(i)));
+			try {
+				imcList.add(nf.parse(lista.get(i)).doubleValue());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				imcList.add(Double.parseDouble(lista.get(i)));
+			}
 			imcNormal.add((double) 25);
 			imcThin.add((double) 18.45);
 			imcVeryThin.add((double) 17);
