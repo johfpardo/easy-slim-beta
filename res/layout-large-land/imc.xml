@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/info_title"
-        android:textSize="26sp" />
+        android:textSize="32sp" />
 
     <TableRow
         android:id="@+id/tableRow2"
@@ -42,11 +42,11 @@
             android:layout_height="0dp"
             android:layout_weight="0.70"
             android:text="@string/none"
-            android:textSize="18sp" />
+            android:textSize="26sp" />
         <com.androidplot.xy.XYPlot
             android:id="@+id/mySimpleXYPlot"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="250dp"
             android:layout_marginTop="1dp"
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
@@ -74,7 +74,7 @@
                 android:background="@drawable/infotabletitle"
                 android:gravity="center"
                 android:text="@string/heightTitleInfo"
-                android:textSize="16sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -85,7 +85,7 @@
                 android:background="@drawable/infotabletitle"
                 android:gravity="center"
                 android:text="@string/weightTitleInfo"
-                android:textSize="16sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -96,7 +96,7 @@
                 android:background="@drawable/infotabletitle"
                 android:gravity="center"
                 android:text="@string/imcTitleInfo"
-                android:textSize="16sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -113,7 +113,7 @@
                 android:background="@drawable/infotable"
                 android:gravity="center"
                 android:text="@string/none"
-                android:textSize="16sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/weightInfo"
@@ -123,7 +123,7 @@
                 android:background="@drawable/infotable"
                 android:gravity="center"
                 android:text="@string/none"
-                android:textSize="16sp" />
+                android:textSize="22sp" />
 
             <TextView
                 android:id="@+id/imcInfo"
@@ -133,7 +133,7 @@
                 android:background="@drawable/infotable"
                 android:gravity="center"
                 android:text="@string/none"
-                android:textSize="16sp" />
+                android:textSize="22sp" />
         </TableRow>
     </LinearLayout>
 
