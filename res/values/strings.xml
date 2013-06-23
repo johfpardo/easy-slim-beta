@@ -37,7 +37,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="Next">Siguiente</string>
     <string name="Previous">Anterior</string>
-    <string name="dialogMessage">por favor inserta valores correctos</string>
+    <string name="dialogMessage">Por favor, inserta valores correctos</string>
     <string name="heightTitleInfo">Estatura</string>
     <string name="weightTitleInfo">Peso</string>
     <string name="imcTitleInfo">IMC</string>

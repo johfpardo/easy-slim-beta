@@ -44,7 +44,7 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		Button boton5 = (Button)findViewById(R.id.buttonCalorias);
 		boton5.setOnClickListener(this);
 		
-		load();
+		//load();
 	}
 		
 	@Override
@@ -80,13 +80,14 @@ public class MainMenuActivity extends Activity implements OnClickListener{
 		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
 		if(height == 0 || weight == 0){
 			startActivity(new Intent(this, FormActivity.class));
+		}else{
+
+			user.set(name, year, month, day, height, weight);	
+			
+			TextView nameview = (TextView) findViewById(R.id.welcomeView);
+			nameview.append("  ");
+			nameview.append(user.getName());
 		}
-		
-		user.set(name, year, month, day, height, weight);	
-		
-		TextView nameview = (TextView) findViewById(R.id.welcomeView);
-		nameview.append("  ");
-		nameview.append(user.getName());
 	}
 }
 	
