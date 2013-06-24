@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backgroundportrait"
     tools:context=".NutrientDetail" >
 
     <TextView
@@ -22,7 +22,13 @@
         android:layout_below="@+id/mineralNameView"                     
         android:text="@string/none"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+       <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/mineralDescriptionView" >
     <TextView
         android:padding="10dp"
         android:id="@+id/mineralFoodView"
@@ -33,5 +39,5 @@
         android:text="@string/whereto"
         android:background="@drawable/infotable"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+    </ScrollView>
 </RelativeLayout>

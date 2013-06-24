@@ -7,7 +7,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/backgroundland"
     tools:context=".AdviceActivity" >
 
     <TextView
@@ -17,14 +16,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:textIsSelectable="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ImageView
         android:id="@+id/recomendationImage"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/relativeLayout1"
         android:layout_alignParentLeft="true"
@@ -40,8 +39,8 @@
         android:layout_below="@+id/numberRecomendation"
         android:layout_toRightOf="@+id/recomendationImage"
         android:textAlignment="gravity"
-        android:textSize="19sp"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="true"
+        android:textSize="25sp" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
