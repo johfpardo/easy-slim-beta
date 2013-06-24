@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_title"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/imageInfo"
+        android:layout_width="63dp"
+        android:layout_height="137dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/none"
+        android:src="@drawable/human" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        android:text="@string/info_condition" />
+    <com.androidplot.xy.XYPlot
+            android:id="@+id/mySimpleXYPlot"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="2"
+            title="Historial IMC"/>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+         >
+
+		<TextView
+		    android:id="@+id/heightTitleInfo"
+		    android:layout_width="75dp"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1.04"
+		    android:background="@drawable/infotabletitle"
+		    android:text="@string/heightTitleInfo"
+		    android:gravity="center"
+		    android:textSize="16sp"
+		    android:textStyle="bold" />
+		
+		<TextView
+        android:id="@+id/weightTitleInfo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:text="@string/weightTitleInfo"
+        android:gravity="center"
+        android:textSize="16sp" 
+        android:background="@drawable/infotabletitle"
+        android:textStyle="bold"/>
+		
+        <TextView
+        android:id="@+id/imcTitleInfo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:text="@string/imcTitleInfo"
+        android:textSize="16sp" 
+        android:gravity="center"
+        android:background="@drawable/infotabletitle"
+        android:textStyle="bold"/>
+		
+    </TableRow>
+    
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         >
+
+        <TextView
+        android:id="@+id/heightInfo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:text="@string/none"
+        android:textSize="16sp" 
+        android:gravity="center"
+        android:background="@drawable/infotable"/>
+        
+        <TextView
+        android:id="@+id/weightInfo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:text="@string/none"
+        android:textSize="16sp" 
+        android:gravity="center"
+        android:background="@drawable/infotable"/>
+        
+        <TextView
+        android:id="@+id/imcInfo"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:text="@string/none"
+        android:textSize="16sp" 
+        android:gravity="center"
+        android:background="@drawable/infotable"/>
+        
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >    
+     </TableRow>
+
+</LinearLayout>
