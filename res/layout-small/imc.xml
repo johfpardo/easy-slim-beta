@@ -14,8 +14,8 @@
 
     <ImageView
         android:id="@+id/imageInfo"
-        android:layout_width="80dp"
-        android:layout_height="170dp"
+        android:layout_width="50dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
         android:contentDescription="@string/none"
         android:src="@drawable/human" />
