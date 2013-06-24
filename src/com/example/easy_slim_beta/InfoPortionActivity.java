@@ -1,15 +1,24 @@
 package com.example.easy_slim_beta;
 
+import easy_slim_beta.swipe.SwipeGestureDetector;
+import easy_slim_beta.swipe.Swipeable;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class InfoPortionActivity extends Activity{
+public class InfoPortionActivity extends Activity implements Swipeable{
 	
-	private int index;
+	private int index = 0;
+	// variable for gesture detector
+	@SuppressWarnings("deprecation")
+	GestureDetector gestureDetector = new GestureDetector(new SwipeGestureDetector(this));
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -17,11 +26,42 @@ public class InfoPortionActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.infoportion);
 		
-		index = 0;
+		//index = 0;
 
 		Intent i = getIntent();
 		String msg = i.getStringExtra("Type");
 		
+		setPortion(msg, index);
+		// message for user's navigation
+		Toast.makeText(this, getString(R.string.navigate), Toast.LENGTH_LONG).show();
+	}
+	
+	// let the user navigate with gestures on screen
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		if (gestureDetector.onTouchEvent(event)) return true;
+		return super.onTouchEvent(event);
+	}
+	
+	
+	public void onLeftSwipe(View view) {
+		String msg = "Type";
+		index = (index == 0) ? 7 : index-1;
+		findViewById(R.id.portion_layout).setAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.slide_in_right));
+		findViewById(R.id.portion_layout).setAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.slide_out_right));
+		setPortion(msg, index);		
+	}
+
+
+	public void onRightSwipe(View view) {
+		String msg = "Type";		
+		index = (index == 7) ? 0 : index+1;
+		findViewById(R.id.portion_layout).setAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.slide_in_left));
+		findViewById(R.id.portion_layout).setAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.slide_out_left));
 		setPortion(msg, index);
 	}
 	
@@ -30,7 +70,7 @@ public class InfoPortionActivity extends Activity{
 		ImageView ri = (ImageView) findViewById(R.id.foodImage);
 		ImageView rj = (ImageView) findViewById(R.id.portionImage);
 		
-		String s = "\n Tamaño Porción: ";
+		String s = "\nTamaño Porcion: ";
 		
 		if(msg.contentEquals("Vegetables") || index == 0){
 			setTitle("Hortalizas, Verduras Y Leguminosas Verdes");
@@ -54,7 +94,7 @@ public class InfoPortionActivity extends Activity{
 		}
 				
 		if(msg.contentEquals("Roots") || index == 3){
-			setTitle("Raíces, Tubérculos Y Plátanos");
+			setTitle("Raices, Tuberculos Y Platanos");
 			t.setText(getString(R.string.Roots) + s);
 			ri.setImageResource(R.drawable.r_roots);
 			rj.setImageResource(R.drawable.roots);
@@ -87,19 +127,5 @@ public class InfoPortionActivity extends Activity{
 			ri.setImageResource(R.drawable.r_fat);
 			rj.setImageResource(R.drawable.fat);
 		}		
-	}
-	
-	public void next(View view) {
-		index++;
-		String msg = "Type";
-		if(index == 8) index=0;
-		setPortion(msg, index);
-	}
-	
-	public void prev(View view) {
-		index--;
-		String msg = "Type";
-		if(index ==-1) index=7;
-		setPortion(msg, index);
 	}
 }

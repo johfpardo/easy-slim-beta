@@ -14,19 +14,21 @@
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_margin="10dp" >
 
         <ImageView
             android:id="@+id/foodImage"
-            android:layout_width="220dp"
-            android:layout_height="match_parent" />
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/r_vegetables2" />
 
         <TextView
             android:id="@+id/portionText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:text="@string/Vegetables"
             android:textSize="18sp" />
 
     </TableRow>

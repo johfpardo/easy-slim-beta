@@ -10,30 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".AdviceActivity" >
 
-    <ImageView
-        android:id="@+id/foodImage"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
-
-    
-    
-  	<TextView
-        android:id="@+id/portionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/foodImage"
-        android:layout_below="@+id/foodImage"
-        android:layout_margin="20dp"
-        android:layout_marginTop="18dp"
-        android:textSize="18sp" />
-  	
-  	<ImageView 
-  	    android:id="@+id/portionImage" 
-  	    android:layout_width="match_parent" 
-  	    android:layout_height="125dp" 
-  	    android:layout_above="@+id/prevButton" 
-  	    android:layout_alignLeft="@+id/prevButton" />
-
     <Button
         android:id="@+id/nextButton"
         style="?android:attr/buttonStyleSmall"
@@ -56,6 +32,27 @@
         android:onClick="onLeftSwipe"
         android:text="@string/Previous" />
 
+    <ImageView
+        android:id="@+id/foodImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
 
+    <ImageView
+        android:id="@+id/portionImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/nextButton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="62dp" />
+
+    <TextView
+        android:id="@+id/portionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodImage"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="36dp"
+        android:textSize="18sp" />
 
 </RelativeLayout>
