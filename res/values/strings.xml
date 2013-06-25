@@ -59,4 +59,5 @@
 	<string name="navigate">Deslice hacia los lados o use los botones para ver más recomendaciones.</string>
 	<string name="recommendationImage">Imagen de la recomendación</string>
 	<string name="recommendationsNotFound">No se encontraron Recomendaciones.</string>
+	<string name="buttonSize">El tamaño de cada boton representa el cantidad del tipo de alimento que debe consumirse</string>
 </resources>
