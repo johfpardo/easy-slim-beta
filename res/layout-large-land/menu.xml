@@ -25,17 +25,6 @@
             android:textSize="18sp" />
     </TableRow>
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_alignTop="@+id/buttonIMC"
-        android:layout_marginRight="230dp"
-        android:layout_marginTop="36dp"
-        android:layout_toLeftOf="@+id/buttonIMC"
-        android:contentDescription="@string/none"
-        android:src="@drawable/logo2" />
-
     <com.google.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
         android:id="@+id/ad"
@@ -53,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/buttonModif"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="70dp"
         android:background="@anim/custombutton"
         android:text="Porciones" />
 
@@ -63,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/buttonPorcion"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="70dp"
         android:background="@anim/custombutton"
         android:text="@string/menunutrients" />
 
@@ -73,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/tableRow2"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="70dp"
         android:background="@anim/custombutton"
         android:text="Recomendación" />
 
@@ -83,16 +72,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/buttonRecomend"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="70dp"
         android:background="@anim/custombutton"
         android:text="@string/menuinfo" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/buttonRecomend"
+        android:layout_marginLeft="103dp"
+        android:layout_toRightOf="@+id/linearLayout1"
+        android:contentDescription="@string/none"
+        android:src="@drawable/logo2" />
 
     <Button
         android:id="@+id/buttonModif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/buttonIMC"
         android:layout_below="@+id/buttonIMC"
-        android:layout_toRightOf="@+id/imageView1"
         android:background="@anim/custombutton"
         android:text="Modificar Datos" />
 
