@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgroundportrait"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/lib/com.google.ads">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonRecomend"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@anim/custombutton"
+        android:text="@string/menuinfo" />
+
+    <Button
+        android:id="@+id/buttonModif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonIMC"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@anim/custombutton"
+        android:text="Modificar Datos" />
+    
+    <Button
+        android:id="@+id/buttonPorcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonModif"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@anim/custombutton"
+        android:text="Porciones" />
+    
+    <Button
+        android:id="@+id/buttonCalorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonPorcion"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@anim/custombutton"
+        android:text="@string/menunutrients" />
+
+    <Button
+        android:id="@+id/buttonRecomend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView1"
+        android:background="@anim/custombutton"
+        android:text="Recomendación" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/welcomeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/welcome" />
+    
+     </TableRow>
+
+    <com.google.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+        android:id="@+id/ad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="e1d655f7344a4197" >
+    </com.google.ads.AdView>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="140dp"
+        android:layout_height="132dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/none"
+        android:src="@drawable/logo2" />
+        
+</RelativeLayout>
