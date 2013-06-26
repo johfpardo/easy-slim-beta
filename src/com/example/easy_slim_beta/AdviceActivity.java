@@ -3,6 +3,7 @@ package com.example.easy_slim_beta;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -11,6 +12,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.*;
 import easy_slim_beta.dao.RecomendationDao;
 import easy_slim_beta.entities.Recomendation;
+import easy_slim_beta.entities.UserProfile;
 import easy_slim_beta.swipe.SwipeGestureDetector;
 import easy_slim_beta.swipe.Swipeable;
 
@@ -23,12 +25,14 @@ public class AdviceActivity extends Activity  implements Swipeable {
 	@SuppressWarnings("deprecation")
 	GestureDetector gestureDetector = new GestureDetector(new SwipeGestureDetector(this));
 	
+	UserProfile profile = new UserProfile();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_advice);
-		
-		recomendations = new RecomendationDao(this).getRecomendationForBMI(MainMenuActivity.user.getImc());
+		load();
+		recomendations = new RecomendationDao(this).getRecomendationForBMI(profile.getImc());
 		// show the first recommendation
 		setRecomendation();
 		// message for user's navigation
@@ -77,5 +81,18 @@ public class AdviceActivity extends Activity  implements Swipeable {
 		} catch(Exception e) {
 			rt.setText(getString(R.string.recommendationsNotFound));
 		}
+	}
+	
+	public void load (){
+		SharedPreferences sharedPref;
+		sharedPref = getSharedPreferences(getString(R.string.user_profile),0);
+		String name = sharedPref.getString(getString(R.string.name), "");
+		int year = sharedPref.getInt(getString(R.string.year), 0);
+		int month = sharedPref.getInt(getString(R.string.month), 0);
+		int day = sharedPref.getInt(getString(R.string.day), 0);
+		float height = sharedPref.getFloat(getString(R.string.height), 0);
+		float weight = sharedPref.getFloat(getString(R.string.weight), 0);
+		
+		profile.set(name, year, month, day, height, weight);		
 	}
 }
