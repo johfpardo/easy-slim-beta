@@ -13,6 +13,8 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ConfigurationInfo;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -132,9 +134,17 @@ public class InfoActivity extends Activity{
         graficaImc.setRangeStep(XYStepMode.INCREMENT_BY_VAL,10);
         graficaImc.setRangeBoundaries(10, 40, BoundaryMode.FIXED);
         graficaImc.setRangeLabel("IMC");
-        graficaImc.getGraphWidget().getRangeLabelPaint().setTextSize(20);    
+        //graficaImc.getGraphWidget().getRangeLabelPaint().setTextSize(20);    
         
         graficaImc.setTitle("historial");
+        
+        Configuration config = getResources().getConfiguration();
+        if((config.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) !=  
+            Configuration.SCREENLAYOUT_SIZE_SMALL) 
+        {
+        	graficaImc.getGraphWidget().getDomainLabelPaint().setTextSize(20);
+        	graficaImc.getGraphWidget().getRangeLabelPaint().setTextSize(20);
+        }
         // reduce the number of range labels
         //graficaImc.setTicksPerRangeLabel(3);
 		
@@ -159,8 +169,20 @@ public class InfoActivity extends Activity{
 		
 		NumberFormat nf = NumberFormat.getInstance(Locale.FRENCH);
 		List<String> lista = Arrays.asList(value.split("&"));		
-//		lista.remove("");
+//		inicializar
+		try {
+			imcList.add(nf.parse(lista.get(1)).doubleValue());
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			imcList.add(Double.parseDouble(lista.get(1)));
+		}
+		imcNormal.add((double) 25);
+		imcThin.add((double) 18.45);
+		imcVeryThin.add((double) 17);
+		imcObese.add((double) 40);
+		imcfat.add((double) 30);
 		
+		//add elements to lists
 		for(int i=1;i<lista.size();i++){			
 			try {
 				imcList.add(nf.parse(lista.get(i)).doubleValue());
