@@ -108,11 +108,11 @@ public final class R {
         public static final int button6=0x7f090031;
         public static final int button7=0x7f09002b;
         public static final int button8=0x7f090029;
-        public static final int buttonCalorias=0x7f090025;
-        public static final int buttonIMC=0x7f090021;
-        public static final int buttonModif=0x7f090023;
-        public static final int buttonPorcion=0x7f090024;
-        public static final int buttonRecomend=0x7f090022;
+        public static final int buttonCalorias=0x7f090027;
+        public static final int buttonIMC=0x7f090024;
+        public static final int buttonModif=0x7f090025;
+        public static final int buttonPorcion=0x7f090026;
+        public static final int buttonRecomend=0x7f090023;
         public static final int editTextHeight=0x7f090038;
         public static final int editTextName=0x7f090033;
         public static final int editTextWeigth=0x7f09003a;
@@ -120,7 +120,7 @@ public final class R {
         public static final int heightInfo=0x7f090017;
         public static final int heightTitleInfo=0x7f090014;
         public static final int imageInfo=0x7f090011;
-        public static final int imageView1=0x7f090026;
+        public static final int imageView1=0x7f090022;
         public static final int imcInfo=0x7f090019;
         public static final int imcTitleInfo=0x7f090016;
         public static final int linearLayout1=0x7f09001b;
@@ -157,7 +157,7 @@ public final class R {
         public static final int vitaminsButton=0x7f09000b;
         public static final int weightInfo=0x7f090018;
         public static final int weightTitleInfo=0x7f090015;
-        public static final int welcomeView=0x7f090027;
+        public static final int welcomeView=0x7f090021;
     }
     public static final class layout {
         public static final int activity_advice=0x7f030000;
