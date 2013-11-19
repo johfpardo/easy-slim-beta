@@ -1,9 +1,10 @@
-package com.example.easy_slim_beta;
+package com.eltx.easy_slim_beta;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.eltx.easy_slim_beta.R;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 

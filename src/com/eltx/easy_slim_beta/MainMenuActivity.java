@@ -1,4 +1,4 @@
-package com.example.easy_slim_beta;
+package com.eltx.easy_slim_beta;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.eltx.easy_slim_beta.R;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 

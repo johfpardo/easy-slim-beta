@@ -1,4 +1,4 @@
-package com.example.easy_slim_beta;
+package com.eltx.easy_slim_beta;
 
 import java.io.FileInputStream;
 import java.text.DecimalFormat;
@@ -28,6 +28,7 @@ import com.androidplot.xy.PointLabelFormatter;
 import com.androidplot.xy.SimpleXYSeries;
 import com.androidplot.xy.XYPlot;
 import com.androidplot.xy.XYStepMode;
+import com.eltx.easy_slim_beta.R;
 
 import easy_slim_beta.entities.UserProfile;
 

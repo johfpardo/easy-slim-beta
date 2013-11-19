@@ -14,7 +14,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class EasySlimDB {
 	private static final int DB_VERSION = 1;
 	private static final String DB_NAME = "easy-slim.db";
-	private static final String DB_PATH = "/data/data/com.example.easy_slim_beta/databases/";
+	private static final String DB_PATH = "/data/data/com.eltx.easy_slim_beta/databases/";
 	// tables
 	public static final String RECOMENDATION_TABLE_NAME = "recomendations";
 	public static final String NUTRIENT_TABLE_NAME = "nutrients";
