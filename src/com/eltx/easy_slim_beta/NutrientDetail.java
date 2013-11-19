@@ -1,6 +1,8 @@
-package com.example.easy_slim_beta;
+package com.eltx.easy_slim_beta;
 
 import java.util.List;
+
+import com.eltx.easy_slim_beta.R;
 
 import easy_slim_beta.dao.NutrientDao;
 import easy_slim_beta.entities.Nutrient;

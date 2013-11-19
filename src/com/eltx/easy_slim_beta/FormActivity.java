@@ -1,8 +1,11 @@
-package com.example.easy_slim_beta;
+package com.eltx.easy_slim_beta;
 
 import java.io.FileOutputStream;
 import java.text.DecimalFormat;
 import java.util.Calendar;
+
+import com.eltx.easy_slim_beta.R;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
