@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest package="com.eltx.easy_slim_beta"
-    android:versionCode="1"
-    android:versionName="1.0" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal">
+    android:versionCode="3"
+    android:versionName="1.0.2" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal">
 
     <uses-sdk
         android:minSdkVersion="8"
